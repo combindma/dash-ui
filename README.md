@@ -29,8 +29,112 @@ Optionally, you can publish the views using
 php artisan vendor:publish --tag="dash-ui-views"
 ```
 
-## Usage
+## Setup
 
+#### 1. Install Tailwind CSS
+Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both tailwind.config.js and postcss.config.js.
+```bash
+npm install -D tailwindcss postcss postcss-import autoprefixer @tailwindcss/aspect-ratio @tailwindcss/forms @tailwindcss/typography system-font-css
+npx tailwindcss init -p
+```
+
+#### 2. Configure your template paths
+Add the paths to all of your template files in your tailwind.config.js file.
+
+TIP: You can specify your primary color by editing primary: colors.stone,
+```javascript
+const colors = require('tailwindcss/colors')
+
+export default {
+    content: [
+        './vendor/combindma/dash-ui/resources/views/**/*.blade.php',
+    ],
+    darkMode: 'class',
+    theme: {
+        fontFamily: {
+            sans: ['Inter var', 'system-ui'],
+        },
+        extend: {
+            colors: {
+                primary: colors.stone,
+            },
+        }
+    },
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        require("@tailwindcss/typography")
+    ],
+}
+```
+
+#### 3. Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
+```css
+@import '../../node_modules/system-font-css/system-font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+```
+
+#### 4. Import javascript components to your js file
+Add the import directive to your ./resources/js/app.js file.
+```javascript
+
+```
+
+#### 5. Update vite config file
+Add this to your file vite.config.js
+```javascript
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: ['resources/css/tailwind.css', 'resources/js/app.js'],
+            refresh: true,
+        }),
+    ],
+});
+```
+
+#### 6. Start your build process
+Run your build process with
+```bash
+npm run build
+```
+
+#### 7.Start using Dash UI in your project
+Make sure your compiled CSS and Javascript are included in your main layout.
+```html
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    @vite(['resources/css/tailwind.css'])
+    @livewireStyles
+</head>
+<body class="antialiased">
+@livewireScripts
+<script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+@vite(['resources/js/app.js'])
+</body>
+</html>
+```
+
+You can replace @livewireStyles with alpine if you are not using Livewire v3 and remove @livewireScripts.
+```html
+<script src="//unpkg.com/alpinejs" defer></script>
+```
 
 ## Testing
 
