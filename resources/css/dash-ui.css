@@ -1,0 +1,21 @@
+@import "components/_1_anim-menu-btn.css";
+@import "components/_1_switch-icon.css";
+@import "components/_1_tabs.css";
+
+[x-cloak] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply text-sm;
+    color: #303030;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #303030;
+}

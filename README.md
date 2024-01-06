@@ -1,4 +1,4 @@
-# A streamlined and stylish UI component library for Laravel Blade, crafted with TailwindCSS and AlpineJs for simplicity and elegance.
+# A streamlined and stylish UI component library for Laravel Blade, crafted with TailwindCSS, Javascript and AlpineJs for simplicity and elegance.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/combindma/dash-ui.svg?style=flat-square)](https://packagist.org/packages/combindma/dash-ui)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/combindma/dash-ui/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/combindma/dash-ui/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/combindma/dash-ui.svg?style=flat-square)](https://packagist.org/packages/combindma/dash-ui)
 
 
-DashUI offers a suite of UI components, drawing inspiration from Shopify Polaris, exclusively crafted with TailwindCSS, Laravel Blade templates, and AlpineJS. These components are designed for effortless integration and offer various customization options.
+DashUI offers a suite of UI components, drawing inspiration from Shopify Polaris, exclusively crafted with TailwindCSS, Laravel Blade templates, Javascript and AlpineJS. These components are designed for effortless integration and offer various customization options.
 
 ## About Combind Agency
 
@@ -17,10 +17,16 @@ If you need assistance with your next project or would like to discuss a custom 
 
 ## Installation
 
-You can install the package via composer:
+You can install the package and its dependencies via composer:
 
 ```bash
 composer require combindma/dash-ui
+composer require codeat3/blade-google-material-design-icons
+```
+
+This package use [Blade Google Material Design Icons](https://github.com/codeat3/blade-google-material-design-icons), so we recommend you to enable icon caching with this library using this command:
+```bash
+php artisan icons:cache
 ```
 
 Optionally, you can publish the views using
@@ -47,17 +53,42 @@ const colors = require('tailwindcss/colors')
 
 export default {
     content: [
+        //...
         './vendor/combindma/dash-ui/resources/views/**/*.blade.php',
     ],
     darkMode: 'class',
     theme: {
         fontFamily: {
-            sans: ['Inter var', 'system-ui'],
+            sans: ['Inter', 'system-ui'],
         },
         extend: {
             colors: {
                 primary: colors.stone,
             },
+            boxShadow: {
+                '100': '0px 1px 0px 0px rgba(26, 26, 26, 0.07)',
+                '200': '0px 3px 1px -1px rgba(26, 26, 26, 0.07)',
+                '300': '0px 4px 6px -2px rgba(26, 26, 26, 0.20)',
+                '400': '0px 8px 16px -4px rgba(26, 26, 26, 0.22)',
+                '500': '0px 12px 20px -8px rgba(26, 26, 26, 0.24)',
+                '600': '0px 20px 20px -8px rgba(26, 26, 26, 0.28)',
+                'bevel-100': '1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, -1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.17) inset, 0px 1px 0px 0px rgba(204, 204, 204, 0.5) inset',
+                'inset-100': '0px 1px 2px 0px rgba(26, 26, 26, 0.15) inset, 0px 1px 1px 0px rgba(26, 26, 26, 0.15) inset',
+                'inset-200': '0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset',
+                'button': '0px 1px 0px 0px #E3E3E3 inset, 1px 0px 0px 0px #E3E3E3 inset, -1px 0px 0px 0px #E3E3E3 inset, 0px -1px 0px 0px #B5B5B5 inset',
+                'button-hover': '0px 1px 0px 0px #EBEBEB inset, -1px 0px 0px 0px #EBEBEB inset, 1px 0px 0px 0px #EBEBEB inset, 0px -1px 0px 0px #CCC inset',
+                'button-inset': '0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset',
+                'button-primary': '0px 2px 0px 0px rgba(255, 255, 255, 0.2) inset, 2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, -2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px -1px 0px 1px #000 inset, 0px 1px 0px 0px #000 inset',
+                'button-primary-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px 0px 0px 0px #000 inset, 0px 0px 0px 0px #1A1A1A',
+                'button-primary-inset': '0px 3px 0px 0px #000 inset',
+                'button-primary-critical': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
+                'button-primary-critical-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
+                'button-primary-critical-inset': '0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset',
+                'button-primary-success': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
+                'button-primary-success-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
+                'button-primary-success-inset': '0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset',
+                'border-inset': '0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset',
+            }
         }
     },
     plugins: [
@@ -72,20 +103,17 @@ export default {
 Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
 ```css
 @import '../../node_modules/system-font-css/system-font.css';
+@import '../../vender/combindma/dash-ui/resources/css/dash-ui.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-[x-cloak] {
-    display: none !important;
-}
 ```
 
 #### 4. Import javascript components to your js file
 Add the import directive to your ./resources/js/app.js file.
 ```javascript
-
+import '../../vendor/combindma/dash-ui/resources/js/dash-ui.js';
 ```
 
 #### 5. Update vite config file
@@ -119,6 +147,7 @@ Make sure your compiled CSS and Javascript are included in your main layout.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
+    <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     @vite(['resources/css/tailwind.css'])
     @livewireStyles
@@ -136,11 +165,8 @@ You can replace @livewireStyles with alpine if you are not using Livewire v3 and
 <script src="//unpkg.com/alpinejs" defer></script>
 ```
 
-## Testing
-
-```bash
-composer test
-```
+## Usage
+See the full [documentation](https://combind.notion.site/Dash-UI-288a0eaa11854c69acae5da7842ee788?pvs=4) for all components. 
 
 ## Contributing
 
