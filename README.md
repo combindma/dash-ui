@@ -61,33 +61,19 @@ export default {
         fontFamily: {
             sans: ['Inter', 'system-ui'],
         },
+        fontSize: {
+            xs: '0.75rem',
+            sm: '0.8125rem',
+            base: '0.875rem',
+            lg: '1.25rem',
+            xl: '1.5rem',
+            '2xl': '1.875rem',
+            '3xl': '2.25rem',
+            '4xl': '3.052rem',
+        },
         extend: {
             colors: {
                 primary: colors.stone,
-            },
-            boxShadow: {
-                '100': '0px 1px 0px 0px rgba(26, 26, 26, 0.07)',
-                '200': '0px 3px 1px -1px rgba(26, 26, 26, 0.07)',
-                '300': '0px 4px 6px -2px rgba(26, 26, 26, 0.20)',
-                '400': '0px 8px 16px -4px rgba(26, 26, 26, 0.22)',
-                '500': '0px 12px 20px -8px rgba(26, 26, 26, 0.24)',
-                '600': '0px 20px 20px -8px rgba(26, 26, 26, 0.28)',
-                'bevel-100': '1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, -1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.17) inset, 0px 1px 0px 0px rgba(204, 204, 204, 0.5) inset',
-                'inset-100': '0px 1px 2px 0px rgba(26, 26, 26, 0.15) inset, 0px 1px 1px 0px rgba(26, 26, 26, 0.15) inset',
-                'inset-200': '0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset',
-                'button': '0px 1px 0px 0px #E3E3E3 inset, 1px 0px 0px 0px #E3E3E3 inset, -1px 0px 0px 0px #E3E3E3 inset, 0px -1px 0px 0px #B5B5B5 inset',
-                'button-hover': '0px 1px 0px 0px #EBEBEB inset, -1px 0px 0px 0px #EBEBEB inset, 1px 0px 0px 0px #EBEBEB inset, 0px -1px 0px 0px #CCC inset',
-                'button-inset': '0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset',
-                'button-primary': '0px 2px 0px 0px rgba(255, 255, 255, 0.2) inset, 2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, -2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px -1px 0px 1px #000 inset, 0px 1px 0px 0px #000 inset',
-                'button-primary-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px 0px 0px 0px #000 inset, 0px 0px 0px 0px #1A1A1A',
-                'button-primary-inset': '0px 3px 0px 0px #000 inset',
-                'button-primary-critical': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
-                'button-primary-critical-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
-                'button-primary-critical-inset': '0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset',
-                'button-primary-success': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
-                'button-primary-success-hover': '0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset',
-                'button-primary-success-inset': '0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset',
-                'border-inset': '0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset',
             }
         }
     },
@@ -100,7 +86,7 @@ export default {
 ```
 
 #### 3. Add the Tailwind directives to your CSS
-Add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
+Import the css files and add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
 ```css
 @import '../../node_modules/system-font-css/system-font.css';
 @import '../../vender/combindma/dash-ui/resources/css/dash-ui.css';
@@ -111,7 +97,7 @@ Add the @tailwind directives for each of Tailwind’s layers to your ./resources
 ```
 
 #### 4. Import javascript components to your js file
-Add the import directive to your ./resources/js/app.js file.
+Import the js file to your ./resources/js/app.js file.
 ```javascript
 import '../../vendor/combindma/dash-ui/resources/js/dash-ui.js';
 ```

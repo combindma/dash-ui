@@ -1,0 +1,50 @@
+/* --------------------------------
+
+File#: _1_popover
+Title: Popover
+Descr: A pop-up box controlled by a trigger element
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --popover-width: 200px;
+    --popover-control-gap: 4px;
+    --popover-viewport-gap: 20px;
+    --popover-transition-duration: 0.2s;
+}
+
+.popover {
+    width: var(--popover-width);
+    margin-top: var(--popover-control-gap);
+    margin-bottom: var(--popover-control-gap);
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 6px;
+    transition: visibility 0s var(--popover-transition-duration), opacity var(--popover-transition-duration);
+}
+
+.popover::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: luminosity;
+    border-radius: 6px;
+    box-shadow: 0.0625rem 0rem 0rem 0rem rgba(0,0,0,.13) inset,-0.0625rem 0rem 0rem 0rem rgba(0,0,0,.13) inset,0rem -0.0625rem 0rem 0rem rgba(0,0,0,.17) inset,0rem 0.0625rem 0rem 0rem hsla(0,0%,80%,.5) inset;
+    box-sizing: border-box;
+}
+
+.popover {
+    @apply lg:rounded-[12px] lg:before:rounded-[12px];
+}
+
+.popover--is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity var(--popover-transition-duration);
+}
