@@ -11,8 +11,6 @@ class Button extends Component
         public string $variant = 'default',
         public string $tone = 'default',
         public string $size = '',
-        public string $icon = '',
-        public string $iconPosition = 'left',
         public bool $disabled = false,
         public bool $fullWidth = false,
         public bool $pressed = false,

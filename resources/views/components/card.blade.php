@@ -1,15 +1,15 @@
 <div @class(['card' => !$reset])>
     <div {{ $attributes->class([
     'card__inner',
-    'bg-white' => ($variant === 'basic'),
-    'bg-[rgba(247,247,247,1)]' => ($variant === 'subdued')
+    'bg-white' => ($variant == 'basic'),
+    'bg-[rgba(247,247,247,1)]' => ($variant == 'subdued')
 ]) }}>
         @if(isset($heading))
             <div class="mb-3">
                 <div class="flex justify-between item-center">
-                    <h2 {{ $heading->attributes->class(['text-sm font-semibold']) }}>
+                    <div {{ $heading->attributes->class(['text-sm font-semibold']) }}>
                         {{ $heading }}
-                    </h2>
+                    </div>
                     @if(isset($actions))
                         <div>{{ $actions }}</div>
                     @endif

@@ -2,9 +2,9 @@
     <div {{ $attributes->class(['card__inner bg-white flex items-center']) }}>
         <div class="flex-shrink flex-grow">
             @if(isset($heading))
-                <h2 {{ $heading->attributes->class(['mb-2 text-sm font-semibold']) }}>
+                <div {{ $heading->attributes->class(['mb-2 text-sm font-semibold']) }}>
                     {{ $heading }}
-                </h2>
+                </div>
             @endif
             <div class="text-sm">{{ $slot }}</div>
         </div>

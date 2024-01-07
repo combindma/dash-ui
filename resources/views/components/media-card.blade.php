@@ -10,11 +10,11 @@
                 @if(isset($heading))
                     <div class="mb-3">
                         <div class="flex justify-between item-center">
-                            <h2 {{ $heading->attributes->class(['text-sm font-semibold']) }}>
+                            <div {{ $heading->attributes->class(['text-sm font-semibold']) }}>
                                 {{ $heading }}
-                            </h2>
+                            </div>
                             @if(isset($actions))
-                                <x-dash-ui-button variant="tertiary" class="group p-1" aria-controls="{{ $id }}">
+                                <x-dash-ui-button variant="subtle" class="group p-1" aria-controls="{{ $id }}">
                                     <x-gmdi-more-horiz class="w-6 h-6 text-neutral-400 group-hover:text-neutral-600"/>
                                 </x-dash-ui-button>
                                 <x-dash-ui-popover id="{{ $id }}" role="dialog">
