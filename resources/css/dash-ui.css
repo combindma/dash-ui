@@ -7,24 +7,6 @@
     display: none !important;
 }
 
-.shadow-button { box-shadow: 0px 1px 0px 0px #E3E3E3 inset, 1px 0px 0px 0px #E3E3E3 inset, -1px 0px 0px 0px #E3E3E3 inset, 0px -1px 0px 0px #B5B5B5 inset; }
-.shadow-button:hover { box-shadow: 0px 1px 0px 0px #EBEBEB inset, -1px 0px 0px 0px #EBEBEB inset, 1px 0px 0px 0px #EBEBEB inset, 0px -1px 0px 0px #CCC inset; }
-.shadow-button:active { box-shadow: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset; }
-.shadow-button-primary { box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.2) inset, 2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, -2px 0px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px -1px 0px 1px #000 inset, 0px 1px 0px 0px #000 inset; }
-.shadow-button-primary:hover { box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.24) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px 0px 0px 0px #000 inset, 0px 0px 0px 0px #1A1A1A; }
-.shadow-button-primary:active { box-shadow: 0px 3px 0px 0px #000 inset; }
-.shadow-button-primary-critical { box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset; }
-.shadow-button-primary-critical:hover { box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset; }
-.shadow-button-primary-critical:active { box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset; }
-.shadow-button-primary-success { box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset; }
-.shadow-button-primary-success:hover { box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.48) inset, 1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, -1px 0px 0px 0px rgba(255, 255, 255, 0.20) inset, 0px -1.5px 0px 0px rgba(0, 0, 0, 0.25) inset; }
-.shadow-button-primary-success:active { box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.60) inset, 1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset, -1px 0px 1px 0px rgba(0, 0, 0, 0.20) inset; }
-.shadow-button-pressed { box-shadow: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset; }
-.shadow-button-pressed:hover { box-shadow: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset; }
-.shadow-button-pressed:active { box-shadow: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset; }
-.shadow-button-subtle:active { box-shadow: -0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0 0.125rem 0.0625rem 0 rgba(26,26,26,.2) inset; }
-.shadow-button-secondary:active { box-shadow: 0px 2px 1px 0px rgba(26, 26, 26, 0.20) inset, 1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset, -1px 0px 1px 0px rgba(26, 26, 26, 0.12) inset }
-
 html {
     scroll-behavior: smooth;
 }
@@ -36,9 +18,15 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 600;
-    color: #303030;
 }
 
+/* --------------------------------
+
+Buttons
+
+-------------------------------- */
+
+/*Default*/
 .btn {
     position: relative;
     display: inline-flex;
@@ -48,22 +36,193 @@ h1, h2, h3, h4 {
     border-radius: 0.5rem;
     padding: 0.357rem 0.75rem;
     font-weight: 550;
+    box-shadow: 0 1px 0 0 #E3E3E3 inset, 1px 0 0 0 #E3E3E3 inset, -1px 0 0 0 #E3E3E3 inset, 0 -1px 0 0 #B5B5B5 inset;
+    background-color: white;
     @apply text-xs antialiased;
+}
+
+.btn:hover {
+    box-shadow: 0 1px 0 0 #EBEBEB inset, -1px 0 0 0 #EBEBEB inset, 1px 0 0 0 #EBEBEB inset, 0 -1px 0 0 #CCC inset;
+    @apply bg-neutral-50;
+}
+
+.btn:active {
+    box-shadow: 0 2px 1px 0 rgba(26, 26, 26, 0.20) inset, 1px 0 1px 0 rgba(26, 26, 26, 0.12) inset, -1px 0 1px 0 rgba(26, 26, 26, 0.12) inset;
+    @apply bg-neutral-50;
 }
 
 .btn:focus {
     outline: none;
 }
+
+/*Primary*/
+.btn--primary {
+    color: white;
+    background-image: linear-gradient(180deg,rgba(48,48,48,0) 63.53%,hsla(0,0%,100%,.15)) !important;
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(0,0,0,.8) inset,0 0 0 0.0625rem #303030 inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.25) inset;
+}
+
+.btn.btn--primary:hover {
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(0,0,0,.8) inset,0 0 0 0.0625rem #303030 inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.25) inset;
+    @apply bg-primary-950;
+}
+
+.btn:active.btn--primary {
+    box-shadow: 0 0.1875rem 0 0 #000 inset;
+    @apply text-neutral-100;
+}
+
+/*Primary critical*/
+.btn--primary-critical {
+    background-image: none;
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(142,31,11,.8) inset,0 0 0 0.0625rem rgba(181,38,11,.8) inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.349) inset;
+    @apply !bg-red-600;
+}
+
+.btn--primary-critical:hover {
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(142,31,11,.8) inset,0 0 0 0.0625rem rgba(181,38,11,.8) inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.349) inset;
+    @apply !bg-red-700;
+}
+
+.btn--primary-critical:active {
+    box-shadow: -0.0625rem 0 0.0625rem 0 rgba(0,0,0,.2) inset,0.0625rem 0 0.0625rem 0 rgba(0,0,0,.2) inset,0 0.125rem 0 0 rgba(0,0,0,.6) inset;
+    @apply !bg-red-800;
+}
+
+/*Primary success*/
+.btn--primary-success {
+    background-image: none;
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(12,81,50,.8) inset,0 0 0 0.0625rem rgba(19,111,69,.8) inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.251) inset;
+    @apply !bg-green-700;
+}
+
+.btn--primary-success:hover {
+    box-shadow: 0 -0.0625rem 0 0.0625rem rgba(12,81,50,.8) inset,0 0 0 0.0625rem rgba(19,111,69,.8) inset,0 0.03125rem 0 0.09375rem hsla(0,0%,100%,.251) inset;
+    @apply !bg-green-800;
+}
+
+.btn--primary-success:active {
+    box-shadow: -0.0625rem 0 0.0625rem 0 rgba(0,0,0,.2) inset,0.0625rem 0 0.0625rem 0 rgba(0,0,0,.2) inset,0 0.125rem 0 0 rgba(0,0,0,.6) inset;
+    @apply !bg-green-900;
+}
+
+/*Secondary*/
+.btn--secondary {
+    color: #303030;
+    box-shadow: none;
+}
+
+.btn--secondary:hover {
+    box-shadow: none;
+    background-color: #d4d4d4;
+}
+
+.btn--secondary:active {
+    box-shadow: 0 0.125rem 0.0625rem 0 rgba(26,26,26,.2) inset,0.0625rem 0 0.0625rem 0 rgba(26,26,26,.12) inset,-0.0625rem 0 0.0625rem 0 rgba(26,26,26,.12) inset;
+    background-color: #ccc;
+}
+
+/*Subtle*/
+.btn--subtle {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.btn--subtle:hover {
+    box-shadow: none;
+    background-color: rgba(0,0,0,.05);
+}
+
+.btn--subtle:active {
+    box-shadow: none;
+    background-color: rgba(0,0,0,.08);
+}
+
+/*Plain*/
+.btn--plain {
+    box-shadow: none;
+    background-color: transparent;
+    @apply text-blue-600;
+}
+
+.btn--plain:hover {
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    background-color: transparent;
+    @apply text-blue-900;
+}
+
+.btn--plain:active {
+    box-shadow: none;
+    background-color: transparent;
+    @apply text-blue-900;
+}
+
+/*Plain critical*/
+.btn--plain-critical {
+    @apply text-red-600;
+}
+
+.btn--plain-critical:hover {
+    @apply text-red-900;
+}
+
+.btn--plain-critical:active {
+    @apply text-red-900;
+}
+
+
+/*Pressed*/
+.btn--pressed {
+    box-shadow: -0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0 0.125rem 0.0625rem 0 rgba(26,26,26,.2) inset;
+    background-color: #ccc !important;
+}
+
+.btn--pressed:hover {
+    box-shadow: -0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0 0.125rem 0.0625rem 0 rgba(26,26,26,.2) inset;
+    background-color: #ccc;
+}
+
+.btn--pressed:active {
+    box-shadow: -0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0.0625rem 0 0.0625rem 0 rgba(26,26,26,.122) inset,0 0.125rem 0.0625rem 0 rgba(26,26,26,.2) inset;
+    background-color: #ccc;
+}
+
+
+/*Disabled*/
 .btn[disabled], .btn[disabled]:hover, .btn[disabled]:active {
+    user-select: none;
+    pointer-events: none;
     box-shadow: none;
     cursor: default;
+    color: rgba(0, 0, 0, 0.17);
+    background-color: rgba(0,0,0,.05);
+    background-image: none !important;
+    text-decoration: none;
 }
+
+.btn[disabled].btn--primary, .btn[disabled].btn--primary:hover, .btn[disabled].btn--primary:active {
+    color: white;
+    background-color: rgba(0,0,0,.17);
+}
+
+.btn[disabled].btn--plain, .btn[disabled].btn--plain:hover, .btn[disabled].btn--plain:active {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* --------------------------------
+
+Box
+
+-------------------------------- */
 .card {
     position: relative;
     z-index: 0;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, -1px 0px 0px 0px rgba(0, 0, 0, 0.13) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.17) inset, 0px 1px 0px 0px rgba(204, 204, 204, 0.5) inset;
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.13) inset, -1px 0 0 0 rgba(0, 0, 0, 0.13) inset, 0 -1px 0 0 rgba(0, 0, 0, 0.17) inset, 0 1px 0 0 rgba(204, 204, 204, 0.5) inset;
     box-sizing: border-box;
 }
 
@@ -78,7 +237,7 @@ h1, h2, h3, h4 {
     pointer-events: none;
     mix-blend-mode: luminosity;
     border-radius: 6px;
-    box-shadow: 0.0625rem 0rem 0rem 0rem rgba(0,0,0,.13) inset,-0.0625rem 0rem 0rem 0rem rgba(0,0,0,.13) inset,0rem -0.0625rem 0rem 0rem rgba(0,0,0,.17) inset,0rem 0.0625rem 0rem 0rem hsla(0,0%,80%,.5) inset;
+    box-shadow: 0.0625rem 0 0 0 rgba(0,0,0,.13) inset,-0.0625rem 0 0 0 rgba(0,0,0,.13) inset,0 -0.0625rem 0 0 rgba(0,0,0,.17) inset,0 0.0625rem 0 0 hsla(0,0%,80%,.5) inset;
     box-sizing: border-box;
 }
 

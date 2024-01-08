@@ -1,15 +1,13 @@
 <div class="card">
-    <div {{ $attributes->class([
-    'bg-white grid gap-y-1 grid-cols-1 lg:grid-cols-12 lg:gap-x-2 lg:gap-y-0',
-]) }}>
-        <div class="lg:col-span-4 h-full">
+    <div {{ $attributes->class(['bg-white grid gap-1 grid-cols-1 lg:grid-cols-12 lg:gap-2']) }}>
+        <div class="lg:col-span-4">
             <div {{ $media->attributes->class(['aspect-w-4 aspect-h-3']) }}>{{ $media }}</div>
         </div>
         <div class="lg:col-span-8">
-            <div class="card__inner lg:py-6">
+            <div class="card__inner lg:py-4">
                 @if(isset($heading))
                     <div class="mb-3">
-                        <div class="flex justify-between item-center">
+                        <div class="flex justify-between item-baseline">
                             <div {{ $heading->attributes->class(['text-sm font-semibold']) }}>
                                 {{ $heading }}
                             </div>

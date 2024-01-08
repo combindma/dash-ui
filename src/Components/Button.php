@@ -9,7 +9,7 @@ class Button extends Component
     public function __construct(
         public string $as = 'button',
         public string $variant = 'default',
-        public string $tone = 'default',
+        public string $tone = 'basic',
         public string $size = '',
         public bool $disabled = false,
         public bool $fullWidth = false,
