@@ -2,6 +2,8 @@
 
 namespace Combindma\DashUi;
 
+use Combindma\DashUi\Components\Avatar;
+use Combindma\DashUi\Components\Badge;
 use Combindma\DashUi\Components\Box;
 use Combindma\DashUi\Components\Button;
 use Combindma\DashUi\Components\ButtonGroup;
@@ -14,6 +16,7 @@ use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Popover;
+use Combindma\DashUi\Components\Thumbnail;
 use Combindma\DashUi\Components\Tooltip;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -38,6 +41,9 @@ class DashUiServiceProvider extends PackageServiceProvider
                 PageHeader::class,
                 Modal::class,
                 Tooltip::class,
+                Avatar::class,
+                Thumbnail::class,
+                Badge::class,
             )
             ->hasViews();
     }
