@@ -1,9 +1,12 @@
 <div class="card">
-    <div {{ $attributes->class(['bg-white grid gap-1 grid-cols-1 lg:grid-cols-12 lg:gap-2']) }}>
-        <div class="lg:col-span-4">
+    <div {{ $attributes->class([
+    'bg-white',
+    'grid gap-1 grid-cols-1 lg:grid-cols-12 lg:gap-2' => !$portrait,
+    ]) }}>
+        <div @class(['lg:col-span-4' => !$portrait])>
             <div {{ $media->attributes->class(['aspect-w-4 aspect-h-3']) }}>{{ $media }}</div>
         </div>
-        <div class="lg:col-span-8">
+        <div @class(['lg:col-span-8' => !$portrait])>
             <div class="card__inner lg:py-4">
                 @if(isset($heading))
                     <div class="mb-3">

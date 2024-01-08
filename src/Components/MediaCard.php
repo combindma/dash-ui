@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class MediaCard extends Component
 {
-    public function __construct(public string $id)
+    public function __construct(public string $id, public bool $portrait = false)
     {
 
     }
