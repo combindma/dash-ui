@@ -1,0 +1,279 @@
+/* --------------------------------
+
+File#: _1_modal-window
+Title: Modal Window
+Descr: A modal dialog used to display critical information
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.modal {
+    position: fixed;
+    @apply z-[15];
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal:not(.modal--is-visible) {
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* close button */
+.modal__close-btn {
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.modal__close-btn .icon {
+    display: block;
+    margin: auto;
+}
+
+.modal__close-btn--outer {
+    /* close button - outside the modal__content */
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    @apply top-3 lg:top-5;
+    @apply right-3 lg:right-5;
+    @apply z-10;
+    @apply bg-gray-900/90;
+    transition: 0.2s;
+}
+.modal__close-btn--outer .icon {
+    @apply text-white;
+    /* icon color */
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.modal__close-btn--outer:hover {
+    @apply bg-gray-900/100;
+}
+.modal__close-btn--outer:hover .icon {
+    transform: scale(1.1);
+}
+
+.modal__close-btn--inner {
+    /* close button - inside the modal__content */
+    --size: 32px;
+    width: var(--size);
+    height: var(--size);
+    @apply bg-white;
+    @apply shadow-md;
+    transition: 0.2s;
+}
+.modal__close-btn--inner .icon {
+    color: inherit;
+    /* icon color */
+}
+.modal__close-btn--inner:hover {
+    @apply bg-white;
+    @apply shadow-lg;
+}
+
+/* animations */
+:root {
+    --modal-transition-duration: 0.2s;
+    /* fallback (i.e., unless specified differently in the variations 👇) */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .modal--animate-fade {
+        --modal-transition-duration: 0.2s;
+        transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+    }
+    .modal--animate-fade.modal--is-visible {
+        transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
+    }
+
+    .modal--animate-scale,
+    .modal--animate-translate-up,
+    .modal--animate-translate-down,
+    .modal--animate-translate-right,
+    .modal--animate-translate-left {
+        --modal-transition-duration: 0.2s;
+        transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+    }
+    .modal--animate-scale .modal__content,
+    .modal--animate-translate-up .modal__content,
+    .modal--animate-translate-down .modal__content,
+    .modal--animate-translate-right .modal__content,
+    .modal--animate-translate-left .modal__content {
+        will-change: transform;
+        transition: -webkit-transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .modal--animate-scale.modal--is-visible,
+    .modal--animate-translate-up.modal--is-visible,
+    .modal--animate-translate-down.modal--is-visible,
+    .modal--animate-translate-right.modal--is-visible,
+    .modal--animate-translate-left.modal--is-visible {
+        transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
+    }
+    .modal--animate-scale.modal--is-visible .modal__content,
+    .modal--animate-translate-up.modal--is-visible .modal__content,
+    .modal--animate-translate-down.modal--is-visible .modal__content,
+    .modal--animate-translate-right.modal--is-visible .modal__content,
+    .modal--animate-translate-left.modal--is-visible .modal__content {
+        transform: scale(1);
+        /* reset all transformations */
+    }
+
+    .modal--animate-slide-up,
+    .modal--animate-slide-down,
+    .modal--animate-slide-right,
+    .modal--animate-slide-left {
+        --modal-transition-duration: 0.3s;
+        transition: opacity 0s var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
+    }
+    .modal--animate-slide-up .modal__content,
+    .modal--animate-slide-down .modal__content,
+    .modal--animate-slide-right .modal__content,
+    .modal--animate-slide-left .modal__content {
+        will-change: transform;
+        transition: -webkit-transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform var(--modal-transition-duration) cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .modal--animate-slide-up.modal--is-visible,
+    .modal--animate-slide-down.modal--is-visible,
+    .modal--animate-slide-right.modal--is-visible,
+    .modal--animate-slide-left.modal--is-visible {
+        transition: background-color var(--modal-transition-duration), visibility 0s;
+    }
+    .modal--animate-slide-up.modal--is-visible .modal__content,
+    .modal--animate-slide-down.modal--is-visible .modal__content,
+    .modal--animate-slide-right.modal--is-visible .modal__content,
+    .modal--animate-slide-left.modal--is-visible .modal__content {
+        transform: scale(1);
+        /* reset all transformations */
+    }
+
+    /* scale */
+    .modal--animate-scale .modal__content {
+        -webkit-transform: scale(0.95);  transform: scale(0.95);
+    }
+
+    /* translate */
+    .modal--animate-translate-up .modal__content {
+        -webkit-transform: translateY(40px);  transform: translateY(40px);
+    }
+
+    .modal--animate-translate-down .modal__content {
+        -webkit-transform: translateY(-40px);  transform: translateY(-40px);
+    }
+
+    .modal--animate-translate-right .modal__content {
+        -webkit-transform: translateX(-40px);  transform: translateX(-40px);
+    }
+
+    .modal--animate-translate-left .modal__content {
+        -webkit-transform: translateX(40px);  transform: translateX(40px);
+    }
+
+    /* slide */
+    .modal--animate-slide-up .modal__content {
+        transform: translateY(100%);
+    }
+
+    .modal--animate-slide-down .modal__content {
+        transform: translateY(-100%);
+    }
+
+    .modal--animate-slide-right .modal__content {
+        -webkit-transform: translateX(-100%);  transform: translateX(-100%);
+    }
+
+    .modal--animate-slide-left .modal__content {
+        -webkit-transform: translateX(100%);  transform: translateX(100%);
+    }
+}
+/* load content - optional */
+.modal--is-loading .modal__content {
+    visibility: hidden;
+}
+.modal--is-loading .modal__loader {
+    display: flex;
+}
+
+.modal__loader {
+    /* loader icon */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    pointer-events: none;
+}
+
+/* --image */
+.modal-img-btn {
+    position: relative;
+    cursor: pointer;
+}
+.modal-img-btn::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-gray-900/0;
+    transition: background 0.2s;
+}
+.modal-img-btn:hover::after {
+    @apply bg-gray-900/70;
+}
+.modal-img-btn:hover .modal-img-btn__icon-wrapper {
+    opacity: 1;
+}
+
+.modal-img-btn__icon-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    @apply bg-gray-900/70;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.modal-img-btn__icon-wrapper .icon {
+    @apply text-white;
+}
+
+.modal .momentum-scrolling {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* icon loading animation */
+.icon--is-spinning {
+    animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

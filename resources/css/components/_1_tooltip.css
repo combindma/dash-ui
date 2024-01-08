@@ -1,0 +1,103 @@
+/* --------------------------------
+
+File#: _1_tooltip
+Title: Tooltip
+Descr: A popup displaying additional text information
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --tooltip-triangle-size: 12px;
+}
+
+.tooltip {
+    /* tooltip element - created using js */
+    position: absolute;
+    @apply z-[5];
+    display: inline-block;
+    @apply py-1.5 lg:py-2 px-2 lg:px-3;
+    @apply rounded;
+    max-width: 200px;
+    @apply bg-white;
+    @apply shadow-md;
+    @apply text-sm lg:text-base;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+@supports ((-webkit-clip-path: inset(50%)) or (clip-path: inset(50%))) {
+    .tooltip::before {
+        /* tooltip triangle  */
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        border: inherit;
+        width: var(--tooltip-triangle-size);
+        height: var(--tooltip-triangle-size);
+        -webkit-clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%);  clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%);
+    }
+}
+
+.tootip:not(.tooltip--sticky) {
+    pointer-events: none;
+}
+
+/* size variations */
+.tooltip--sm {
+    max-width: 150px;
+    @apply text-xs;
+    @apply py-1 lg:py-1.5 px-1.5 lg:px-2;
+}
+
+.tooltip--md {
+    max-width: 300px;
+    @apply py-2 lg:py-3 px-3 lg:px-5;
+}
+
+.tooltip--lg {
+    max-width: 350px;
+    @apply text-base;
+    @apply py-2 lg:py-3 px-3 lg:px-5;
+}
+
+/* tooltip position */
+.tooltip {
+    /* variable used in JS to proper place tooltip triangle */
+    --tooltip-triangle-translate: 0px;
+}
+
+.tooltip--top::before, .tooltip--bottom::before {
+    left: calc(50% - var(--tooltip-triangle-size) / 2);
+}
+
+.tooltip--top::before {
+    bottom: calc(var(--tooltip-triangle-size) * -0.5);
+    -webkit-transform: translateX(var(--tooltip-triangle-translate)) rotate(-45deg);transform: translateX(var(--tooltip-triangle-translate)) rotate(-45deg);
+}
+
+.tooltip--bottom::before {
+    top: calc(var(--tooltip-triangle-size) * -0.5);
+    -webkit-transform: translateX(var(--tooltip-triangle-translate)) rotate(135deg);transform: translateX(var(--tooltip-triangle-translate)) rotate(135deg);
+}
+
+.tooltip--left::before, .tooltip--right::before {
+    top: calc(50% - var(--tooltip-triangle-size) / 2);
+}
+
+.tooltip--left::before {
+    right: calc(var(--tooltip-triangle-size) * -0.5);
+    -webkit-transform: translateX(var(--tooltip-triangle-translate)) rotate(-135deg);transform: translateX(var(--tooltip-triangle-translate)) rotate(-135deg);
+}
+
+.tooltip--right::before {
+    left: calc(var(--tooltip-triangle-size) * -0.5);
+    -webkit-transform: translateX(var(--tooltip-triangle-translate)) rotate(45deg);transform: translateX(var(--tooltip-triangle-translate)) rotate(45deg);
+}
+
+.tooltip--is-hidden {
+    /* class used in JS to hide the tooltip element before its top/left positions are set */
+    visibility: hidden;
+    opacity: 0;
+}

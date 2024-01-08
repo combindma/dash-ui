@@ -11,8 +11,10 @@ use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\EmptyState;
 use Combindma\DashUi\Components\MediaCard;
+use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Popover;
+use Combindma\DashUi\Components\Tooltip;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -34,6 +36,8 @@ class DashUiServiceProvider extends PackageServiceProvider
                 EmptyState::class,
                 MediaCard::class,
                 PageHeader::class,
+                Modal::class,
+                Tooltip::class,
             )
             ->hasViews();
     }

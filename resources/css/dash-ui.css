@@ -1,7 +1,9 @@
 @import "components/_1_anim-menu-btn.css";
+@import "components/_1_modal-window.css";
 @import "components/_1_popover.css";
 @import "components/_1_switch-icon.css";
 @import "components/_1_tabs.css";
+@import "components/_1_tooltip.css";
 
 [x-cloak] {
     display: none !important;
