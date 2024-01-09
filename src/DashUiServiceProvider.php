@@ -14,6 +14,7 @@ use Combindma\DashUi\Components\Card;
 use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\EmptyState;
+use Combindma\DashUi\Components\InlineError;
 use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
@@ -48,6 +49,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Badge::class,
                 Banner::class,
                 Alert::class,
+                InlineError::class,
             )
             ->hasViews();
     }

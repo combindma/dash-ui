@@ -6,7 +6,7 @@
 ]) }}>
         @if(isset($heading))
             <div class="mb-3">
-                <div class="flex justify-between item-center">
+                <div class="flex justify-between items-center">
                     <div {{ $heading->attributes->class(['text-sm font-semibold']) }}>
                         {{ $heading }}
                     </div>
