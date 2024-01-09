@@ -246,5 +246,20 @@ Box
 }
 
 .card__inner {
-    @apply p-[12px] lg:p-[16px]
+    @apply p-3 lg:p-4
+}
+
+
+/* --------------------------------
+
+Alert
+
+-------------------------------- */
+
+.alert {
+    clip-path: inset(50%);
+}
+
+.alert--is-visible {
+    clip-path: none;
 }

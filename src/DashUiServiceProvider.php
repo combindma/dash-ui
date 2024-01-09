@@ -4,6 +4,7 @@ namespace Combindma\DashUi;
 
 use Combindma\DashUi\Components\Avatar;
 use Combindma\DashUi\Components\Badge;
+use Combindma\DashUi\Components\Banner;
 use Combindma\DashUi\Components\Box;
 use Combindma\DashUi\Components\Button;
 use Combindma\DashUi\Components\ButtonGroup;
@@ -44,6 +45,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Avatar::class,
                 Thumbnail::class,
                 Badge::class,
+                Banner::class,
             )
             ->hasViews();
     }
