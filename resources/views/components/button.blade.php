@@ -12,7 +12,7 @@
         'btn--plain' => ($variant == 'plain'),
         'btn--plain-critical' => ($variant == 'plain' && $tone == 'critical'),
         'btn--pressed' => $pressed,
-        'py-2 text-sm' => ($size == 'large'),
+        'py-3 text-sm' => ($size == 'large'),
         'w-full justify-center' => $fullWidth,
         ]) }}>
         <div @class(['inline-flex items-center gap-x-1','group-active:translate-y-[0.0625rem]' => !$disabled])>{{ $slot }}</div>
@@ -31,7 +31,7 @@
         'btn--plain' => ($variant == 'plain'),
         'btn--plain-critical' => ($variant == 'plain' && $tone == 'critical'),
         'btn--pressed' => $pressed,
-        'py-2 text-sm' => ($size == 'large'),
+        'py-3 text-sm' => ($size == 'large'),
         'w-full justify-center' => $fullWidth,
         ]) }}>
         <div @class(['inline-flex items-center gap-x-1','group-active:translate-y-[0.0625rem]' => !$disabled])>{{ $slot }}</div>

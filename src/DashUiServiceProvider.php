@@ -2,6 +2,7 @@
 
 namespace Combindma\DashUi;
 
+use Combindma\DashUi\Components\Alert;
 use Combindma\DashUi\Components\Avatar;
 use Combindma\DashUi\Components\Badge;
 use Combindma\DashUi\Components\Banner;
@@ -46,6 +47,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Thumbnail::class,
                 Badge::class,
                 Banner::class,
+                Alert::class,
             )
             ->hasViews();
     }
