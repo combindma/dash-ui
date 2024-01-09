@@ -8,17 +8,18 @@
                     <x-gmdi-arrow-back class="w-4 h-4"/>
                 </x-dash-ui-button>
             @endif
-            <div class="flex items-baseline gap-x-2">
-                <div>
+
+            <div>
+                <div class="flex flex-wrap items-center gap-x-2">
                     <h1 class="text-lg font-bold">{{ $title }}</h1>
-                    @if($subtitle)
-                        <p class="text-xs mt-1 text-neutral-600">{{ $subtitle }}</p>
+                    @if(isset($titleMetadata))
+                        <div {{ $titleMetadata->attributes->class(['flex flex-wrap items-center gap-x-1']) }}>
+                            {{ $titleMetadata }}
+                        </div>
                     @endif
                 </div>
-                @if(isset($titleMetadata))
-                    <div {{ $titleMetadata->attributes->class(['flex flex-wrap items-center gap-x-1']) }}>
-                        {{ $titleMetadata }}
-                    </div>
+                @if($subtitle)
+                    <p class="text-xs mt-1 text-neutral-600">{{ $subtitle }}</p>
                 @endif
             </div>
         </div>
