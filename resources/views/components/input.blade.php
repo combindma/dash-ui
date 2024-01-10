@@ -10,7 +10,7 @@
     'pr-12' => $suffix,
     'ring-neutral-500/90' => !$error,
     'bg-red-100/50 ring-red-800' => $error,
-]) }}/>
+]) }}>
     @if($suffix)
         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
             <span class="text-neutral-600 text-sm leading-none">{{ $suffix }}</span>

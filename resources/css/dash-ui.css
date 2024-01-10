@@ -39,6 +39,15 @@ Forms
     overflow-wrap: break-word;
 }
 
+.search-input::-webkit-search-decoration, .search-input::-webkit-search-cancel-button, .search-input::-webkit-search-results-button, .search-input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+.search-input::-ms-clear, .search-input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 
 /* --------------------------------
 
