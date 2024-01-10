@@ -3,7 +3,7 @@
     'search-input block w-full appearance-none box-border rounded-lg text-sm border-0 py-1.5 mb-1.5 text-neutral-900 ring-1 ring-inset placeholder:text-neutral-500 focus:ring-2 focus:ring-inset focus:ring-primary-700',
     'ring-neutral-500/90' => !$error,
     'bg-red-100/50 ring-red-800' => $error,
-    'pr-5' => !$iconLeft,
+    'pr-7' => !$iconLeft,
     'pl-8' => $iconLeft,
 ]) }}>
     <button @class([

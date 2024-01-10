@@ -65,6 +65,7 @@
 
     //initialize the FlashMessage objects
     var flashMessages = document.getElementsByClassName('js-flash-message');
+
     if( flashMessages.length > 0 ) {
         var flashMessagesArray = [];
         for( var i = 0; i < flashMessages.length; i++) {
@@ -77,5 +78,18 @@
                 element.checkFlashMessage(event.detail);
             });
         });
+    }
+
+    //This section override the original behavior
+    var autoFlashMessages = document.getElementsByClassName('js-auto-flash-message');
+
+    function showFlashMessage(element) {
+        var event = new CustomEvent('showFlashMessage');
+        element.dispatchEvent(event);
+    };
+
+    //show first flash message available in the page
+    if( autoFlashMessages.length > 0 ) {
+        showFlashMessage(autoFlashMessages[0]);
     }
 }());

@@ -8,7 +8,8 @@ class FlashMessage extends Component
 {
     public function __construct(
         public string $message,
-        public bool $error = false
+        public bool $error = false,
+        public bool $show = false,
     ) {
     }
 
