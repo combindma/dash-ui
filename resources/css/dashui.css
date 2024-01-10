@@ -3,6 +3,7 @@
 @import "components/_1_radios-checkboxes.css";
 @import "components/_1_tabs.css";
 @import "components/_1_tooltip.css";
+@import "components/_1_expandable-search.css";
 
 [x-cloak] {
     display: none !important;
@@ -42,12 +43,12 @@ Forms
 .search-input::-webkit-search-decoration, .search-input::-webkit-search-cancel-button, .search-input::-webkit-search-results-button, .search-input::-webkit-search-results-decoration {
     -webkit-appearance: none;
 }
+
 .search-input::-ms-clear, .search-input::-ms-reveal {
     display: none;
     width: 0;
     height: 0;
 }
-
 
 /* --------------------------------
 

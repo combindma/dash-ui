@@ -101,7 +101,7 @@ Import the css files and add the @tailwind directives for each of Tailwind’s l
 #### 4. Import javascript components to your js file
 Import the js file to your ./resources/js/app.js file.
 ```javascript
-import '../../vendor/combindma/dash-ui/resources/js/dash-ui.js';
+import '../../vendor/combindma/dash-ui/resources/js/dashui.js';
 ```
 
 #### 5. Update vite config file

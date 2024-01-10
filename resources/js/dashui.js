@@ -1,4 +1,5 @@
 import './components/_1_alert.js';
+import './components/_1_expandable-search.js';
 import './components/_1_modal-window.js';
 import './components/_1_popover.js';
 import './components/_1_smooth-scrolling.js';

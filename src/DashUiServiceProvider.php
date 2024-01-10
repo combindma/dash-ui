@@ -15,6 +15,7 @@ use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\CircleLoader;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\EmptyState;
+use Combindma\DashUi\Components\ExpandableSearch;
 use Combindma\DashUi\Components\FlashMessage;
 use Combindma\DashUi\Components\InlineError;
 use Combindma\DashUi\Components\Input;
@@ -61,6 +62,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Textarea::class,
                 Select::class,
                 SearchInput::class,
+                ExpandableSearch::class,
                 CircleLoader::class,
             )
             ->hasViews();

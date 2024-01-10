@@ -1,0 +1,118 @@
+/* --------------------------------
+
+File#: _1_expandable-search
+Title: Expandable Search
+Descr: A search button that expands to reveal a search input element
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --expandable-search-size-compact: 2.2rem;
+    /* height and width - compact version /  height - expanded version */
+    --expandable-search-size-expanded: 10rem;
+    /* width - expanded version */
+    --expandable-search-radius: 6px;
+    /* border radius */
+    --expandable-search-icon-size: 1.2rem;
+    /* lens icon size */
+    --expandable-search-btn-padding: 2px;
+    /* gap between button and input element */
+}
+
+.expandable-search__input {
+    width: var(--expandable-search-size-compact);
+    height: var(--expandable-search-size-compact);
+    box-shadow: 0 1px 0 0 #E3E3E3 inset, 1px 0 0 0 #E3E3E3 inset, -1px 0 0 0 #E3E3E3 inset, 0 -1px 0 0 #B5B5B5 inset;
+    transition: width 0.3s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 0.3s, background-color 0.3s;
+}
+.expandable-search__input--has-content {
+    @apply ring-neutral-500/90 ring-1 ring-inset;
+}
+.expandable-search__input::-webkit-input-placeholder {
+    opacity: 0;
+    color: transparent;
+}
+.expandable-search__input::-moz-placeholder {
+    opacity: 0;
+    color: transparent;
+}
+.expandable-search__input:-ms-input-placeholder {
+    opacity: 0;
+    color: transparent;
+}
+.expandable-search__input::-ms-input-placeholder {
+    opacity: 0;
+    color: transparent;
+}
+.expandable-search__input::placeholder {
+    opacity: 0;
+    color: transparent;
+}
+
+.expandable-search__input:not(:focus):not(.expandable-search__input--has-content) {
+    padding: 0;
+}
+.expandable-search__input:focus, .expandable-search__input.expandable-search__input--has-content {
+    @apply bg-white pr-2;
+    width: var(--expandable-search-size-expanded);
+    padding-top: 0;
+    padding-bottom: 0;
+    outline: none;
+    @apply text-neutral-900;
+    cursor: auto;
+    user-select: auto;
+}
+
+.expandable-search__input:focus::-webkit-input-placeholder, .expandable-search__input.expandable-search__input--has-content::-webkit-input-placeholder {
+    opacity: 1;
+    @apply text-neutral-500;
+}
+.expandable-search__input:focus::-moz-placeholder, .expandable-search__input.expandable-search__input--has-content::-moz-placeholder {
+    opacity: 1;
+    @apply text-neutral-500;
+}
+.expandable-search__input:focus:-ms-input-placeholder, .expandable-search__input.expandable-search__input--has-content:-ms-input-placeholder {
+    opacity: 1;
+    @apply text-neutral-500;
+}
+.expandable-search__input:focus::-ms-input-placeholder, .expandable-search__input.expandable-search__input--has-content::-ms-input-placeholder {
+    opacity: 1;
+    @apply text-neutral-500;
+}
+.expandable-search__input:focus::placeholder, .expandable-search__input.expandable-search__input--has-content::placeholder {
+    opacity: 1;
+    @apply text-neutral-500;
+}
+.expandable-search__input:focus + .expandable-search__btn {
+    pointer-events: auto;
+}
+.expandable-search__input::-webkit-search-decoration, .expandable-search__input::-webkit-search-cancel-button, .expandable-search__input::-webkit-search-results-button, .expandable-search__input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.expandable-search__btn {
+    transition: background-color 0.3s;
+}
+
+.expandable-search__btn {
+    position: absolute;
+    display: flex;
+    top: var(--expandable-search-btn-padding, 2px);
+    right: var(--expandable-search-btn-padding, 2px);
+    width: calc(var(--expandable-search-size-compact) - var(--expandable-search-btn-padding, 2px)*2);
+    height: calc(var(--expandable-search-size-compact) - var(--expandable-search-btn-padding, 2px)*2);
+    border-radius: var(--expandable-search-radius);
+    z-index: 1;
+    pointer-events: none;
+    transition: background-color 0.3s;
+    @apply text-neutral-600 bg-white;
+}
+
+.expandable-search__btn:hover {
+    box-shadow: 0 1px 0 0 #EBEBEB inset, -1px 0 0 0 #EBEBEB inset, 1px 0 0 0 #EBEBEB inset, 0 -1px 0 0 #CCC inset;
+    @apply bg-neutral-50;
+}
+.expandable-search__btn:focus {
+    outline: none;
+    @apply bg-neutral-50;
+}
