@@ -21,6 +21,7 @@ use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Popover;
+use Combindma\DashUi\Components\Select;
 use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
 use Combindma\DashUi\Components\Tooltip;
@@ -56,6 +57,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 FlashMessage::class,
                 Input::class,
                 Textarea::class,
+                Select::class,
             )
             ->hasViews();
     }
