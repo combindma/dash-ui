@@ -293,3 +293,63 @@ Alert
 .alert--is-visible {
     clip-path: none;
 }
+
+
+/* --------------------------------
+
+Circle Loader
+
+-------------------------------- */
+:root {
+    --circle-loader-v1-size: 48px;
+    --circle-loader-v1-stroke-width: 4px;
+}
+
+.circle-loader {
+    position: relative;
+    display: inline-block;
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader__label {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+    }
+}
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v1 {
+        transform: rotate(45deg);
+        will-change: transform;
+        animation: circle-loader-1 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .circle-loader--v1 .circle-loader__circle {
+        width: var(--circle-loader-v1-size);
+        height: var(--circle-loader-v1-size);
+        border-width: var(--circle-loader-v1-stroke-width);
+        border-style: solid;
+        @apply border-primary-700/20;
+        border-radius: 50%;
+    }
+    .circle-loader--v1 .circle-loader__circle::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: inherit;
+        border-style: inherit;
+        border-color: transparent;
+        @apply border-t-primary-700;
+        border-radius: inherit;
+    }
+}
+@keyframes circle-loader-1 {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}

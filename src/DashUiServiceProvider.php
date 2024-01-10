@@ -12,6 +12,7 @@ use Combindma\DashUi\Components\ButtonGroup;
 use Combindma\DashUi\Components\CalloutCard;
 use Combindma\DashUi\Components\Card;
 use Combindma\DashUi\Components\CardStack;
+use Combindma\DashUi\Components\CircleLoader;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\EmptyState;
 use Combindma\DashUi\Components\FlashMessage;
@@ -60,6 +61,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Textarea::class,
                 Select::class,
                 SearchInput::class,
+                CircleLoader::class,
             )
             ->hasViews();
     }
