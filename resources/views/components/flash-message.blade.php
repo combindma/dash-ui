@@ -6,8 +6,8 @@
     ]) }}>
     <div class="flex items-center gap-x-2">
         <p class="leading-none font-medium">{{ $message }}</p>
-        <x-dash-ui-button type="button" variant="subtle" class="p-1 text-inherit" onclick="this.closest('.flash-message--is-visible').classList.remove('flash-message--is-visible')">
+        <x-dashui-button type="button" variant="subtle" class="p-1 text-inherit" onclick="this.closest('.flash-message--is-visible').classList.remove('flash-message--is-visible')">
             <x-gmdi-close class="w-6 h-6"/>
-        </x-dash-ui-button>
+        </x-dashui-button>
     </div>
 </div>

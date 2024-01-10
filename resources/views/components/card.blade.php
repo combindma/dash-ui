@@ -21,7 +21,7 @@
         @endif
 
         @if($hasDivider)
-            <x-dash-ui-divider class="mb-3"/>
+            <x-dashui-divider class="mb-3"/>
         @endif
 
         <div class="text-sm">{{ $slot }}</div>

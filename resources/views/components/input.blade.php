@@ -18,7 +18,7 @@
     @endif
 </div>
 @if($error)
-    <x-dash-ui-inline-error :message="$error"/>
+    <x-dashui-inline-error :message="$error"/>
 @elseif($helpText)
     <p class="text-xs text-neutral-600">{{ $helpText }}</p>
 @endif

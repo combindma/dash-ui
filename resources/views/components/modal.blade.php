@@ -9,15 +9,15 @@
         @if($title)
             <header class="bg-neutral-300/50 py-2 lg:py-3 px-2 lg:px-3 flex items-center justify-between">
                 <h2 class="truncate font-bold">{{ $title }}</h2>
-                <x-dash-ui-button type="button" variant="subtle" class="p-1 text-neutral-500 js-modal__close js-tab-focus">
+                <x-dashui-button type="button" variant="subtle" class="p-1 text-neutral-500 js-modal__close js-tab-focus">
                     <x-gmdi-close class="w-6 h-6"/>
-                </x-dash-ui-button>
+                </x-dashui-button>
             </header>
         @else
             <div class="float-right sticky top-2 right-2">
-                <x-dash-ui-button type="button" variant="subtle" class="p-1 text-neutral-500 js-modal__close js-tab-focus">
+                <x-dashui-button type="button" variant="subtle" class="p-1 text-neutral-500 js-modal__close js-tab-focus">
                     <x-gmdi-close class="w-6 h-6"/>
-                </x-dash-ui-button>
+                </x-dashui-button>
             </div>
         @endif
 
@@ -28,7 +28,7 @@
         </div>
 
         @if(isset($actions))
-            <x-dash-ui-divider/>
+            <x-dashui-divider/>
             <footer class="p-2 lg:p-4">
                 <div {{ $actions->attributes->class(['flex justify-end gap-2 lg:gap-3']) }}>
                     {{ $actions }}

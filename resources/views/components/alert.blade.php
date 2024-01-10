@@ -18,8 +18,8 @@
             @endif
             <div class="text-sm font-medium">{{ $slot }}</div>
         </div>
-        <x-dash-ui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
+        <x-dashui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
             <x-gmdi-close class="w-6 h-6"/>
-        </x-dash-ui-button>
+        </x-dashui-button>
     </div>
 </div>

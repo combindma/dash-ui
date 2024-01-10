@@ -14,6 +14,7 @@ use Combindma\DashUi\Components\Card;
 use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\CircleLoader;
 use Combindma\DashUi\Components\Divider;
+use Combindma\DashUi\Components\Dropzone;
 use Combindma\DashUi\Components\EmptyState;
 use Combindma\DashUi\Components\ExpandableSearch;
 use Combindma\DashUi\Components\FlashMessage;
@@ -37,7 +38,7 @@ class DashUiServiceProvider extends PackageServiceProvider
     {
         $package->name('dash-ui')
             ->hasViewComponents(
-                'dash-ui',
+                'dashui',
                 Button::class,
                 ButtonGroup::class,
                 Popover::class,
@@ -64,6 +65,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 SearchInput::class,
                 ExpandableSearch::class,
                 CircleLoader::class,
+                Dropzone::class,
             )
             ->hasViews();
     }

@@ -2,9 +2,9 @@
     <div class="min-w-0 flex-1">
         <div class="flex items-baseline gap-x-1">
             @if($backAction)
-                <x-dash-ui-button as="link" href="{{ $backAction }}" variant="subtle" class="p-1.5">
+                <x-dashui-button as="link" href="{{ $backAction }}" variant="subtle" class="p-1.5">
                     <x-gmdi-arrow-back class="w-4 h-4"/>
-                </x-dash-ui-button>
+                </x-dashui-button>
             @endif
 
             <div>

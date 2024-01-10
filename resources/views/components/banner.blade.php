@@ -22,9 +22,9 @@
                         <span class="text-sm font-semibold">{{ $title }}</span>
                     </div>
                     <div>
-                        <x-dash-ui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
+                        <x-dashui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
                             <x-gmdi-close class="w-6 h-6"/>
-                        </x-dash-ui-button>
+                        </x-dashui-button>
                     </div>
                 </div>
             @endif
@@ -52,9 +52,9 @@
                     <div {{ $attributes->class(['text-sm']) }}>{{ $slot }}</div>
                 </div>
                 @if(!$title)
-                    <x-dash-ui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
+                    <x-dashui-button type="button" variant="subtle" class="p-1 js-alert__close-btn">
                         <x-gmdi-close class="w-6 h-6 text-neutral-500"/>
-                    </x-dash-ui-button>
+                    </x-dashui-button>
                 @endif
             </div>
         </div>

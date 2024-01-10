@@ -15,12 +15,12 @@
                                 {{ $heading }}
                             </div>
                             @if(isset($actions))
-                                <x-dash-ui-button variant="subtle" class="group p-1" aria-controls="{{ $id }}">
+                                <x-dashui-button variant="subtle" class="group p-1" aria-controls="{{ $id }}">
                                     <x-gmdi-more-horiz class="w-6 h-6 text-neutral-400 group-hover:text-neutral-600"/>
-                                </x-dash-ui-button>
-                                <x-dash-ui-popover id="{{ $id }}" role="dialog">
+                                </x-dashui-button>
+                                <x-dashui-popover id="{{ $id }}" role="dialog">
                                     {{ $actions }}
-                                </x-dash-ui-popover>
+                                </x-dashui-popover>
                             @endif
                         </div>
                     </div>
