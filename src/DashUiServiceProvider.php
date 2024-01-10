@@ -16,10 +16,12 @@ use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\EmptyState;
 use Combindma\DashUi\Components\FlashMessage;
 use Combindma\DashUi\Components\InlineError;
+use Combindma\DashUi\Components\Input;
 use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Popover;
+use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
 use Combindma\DashUi\Components\Tooltip;
 use Spatie\LaravelPackageTools\Package;
@@ -52,6 +54,8 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Alert::class,
                 InlineError::class,
                 FlashMessage::class,
+                Input::class,
+                Textarea::class,
             )
             ->hasViews();
     }

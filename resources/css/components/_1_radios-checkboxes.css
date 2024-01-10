@@ -42,7 +42,7 @@ Usage: codyhouse.co/license
 .radio + label,
 .checkbox + label {
     display: inline-block;
-    line-height: var(--checkbox-radio-line-height);
+    line-height: 1;
     user-select: none;
     cursor: pointer;
     padding-left: calc(var(--checkbox-radio-size) + var(--checkbox-radio-gap));

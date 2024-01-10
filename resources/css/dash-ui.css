@@ -15,10 +15,28 @@ html {
 body {
     @apply text-sm;
     color: #303030;
+    line-height: 1.55;
+}
+
+p {
+    line-height: 1.55;
 }
 
 h1, h2, h3, h4 {
     font-weight: 600;
+}
+
+/* --------------------------------
+
+Forms
+
+-------------------------------- */
+.form-label {
+    display: flex;
+    line-height: 1.55;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 
@@ -144,6 +162,7 @@ Buttons
 .btn--plain {
     box-shadow: none;
     background-color: transparent;
+    font-weight: 450;
     @apply text-blue-600;
 }
 
