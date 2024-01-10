@@ -26,6 +26,7 @@ use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Popover;
 use Combindma\DashUi\Components\SearchInput;
 use Combindma\DashUi\Components\Select;
+use Combindma\DashUi\Components\Tag;
 use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
 use Combindma\DashUi\Components\Tooltip;
@@ -66,6 +67,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 ExpandableSearch::class,
                 CircleLoader::class,
                 Dropzone::class,
+                Tag::class,
             )
             ->hasViews();
     }
