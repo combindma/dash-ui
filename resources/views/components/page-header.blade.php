@@ -1,6 +1,4 @@
-<div {{ $attributes->class([
-    'mb-4 md:flex md:items-baseline md:justify-between',
-]) }}>
+<div {{ $attributes->class(['mb-4 md:flex md:items-baseline md:justify-between']) }}>
     <div class="min-w-0 flex-1">
         <div class="flex items-baseline gap-x-1">
             @if($backAction)

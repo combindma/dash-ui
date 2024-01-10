@@ -1,5 +1,6 @@
 @import "components/_1_modal-window.css";
 @import "components/_1_popover.css";
+@import "components/_1_radios-checkboxes.css";
 @import "components/_1_tabs.css";
 @import "components/_1_tooltip.css";
 
@@ -19,6 +20,7 @@ body {
 h1, h2, h3, h4 {
     font-weight: 600;
 }
+
 
 /* --------------------------------
 
@@ -214,7 +216,7 @@ Buttons
 
 /* --------------------------------
 
-Box
+Card
 
 -------------------------------- */
 .card {
