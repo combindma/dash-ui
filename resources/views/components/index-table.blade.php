@@ -1,6 +1,11 @@
 <div class="card">
+    @if(isset($filter))
+        <div {{ $filter->attributes->class('flex items-center justify-between border-b border-neutral-200 bg-white px-3 py-1.5') }}>
+            {{ $filter }}
+        </div>
+    @endif
     <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-neutral-300">
+        <table class="min-w-full divide-y divide-neutral-200">
             <thead class="bg-gray-50">
             <tr>
                 @foreach($headings as $column)
@@ -19,6 +24,6 @@
         </table>
     </div>
     @if(isset($pagination))
-        <div class="bg-gray-100">{{ $pagination }}</div>
+        <div {{ $pagination->attributes->class('border-t border-neutral-200 bg-gray-100') }}>{{ $pagination }}</div>
     @endif
 </div>
