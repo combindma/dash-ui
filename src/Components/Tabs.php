@@ -4,16 +4,15 @@ namespace Combindma\DashUi\Components;
 
 use Illuminate\View\Component;
 
-class MediaCard extends Component
+class Tabs extends Component
 {
     public function __construct(
-        public string $id,
-        public bool $portrait = false
+        public array $tabs,
     ) {
     }
 
     public function render()
     {
-        return view('dash-ui::components.media-card');
+        return view('dash-ui::components.tabs');
     }
 }

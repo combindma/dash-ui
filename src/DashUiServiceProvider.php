@@ -31,6 +31,8 @@ use Combindma\DashUi\Components\SearchInput;
 use Combindma\DashUi\Components\Select;
 use Combindma\DashUi\Components\TableCell;
 use Combindma\DashUi\Components\TableRow;
+use Combindma\DashUi\Components\TabPanel;
+use Combindma\DashUi\Components\Tabs;
 use Combindma\DashUi\Components\Tag;
 use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
@@ -78,6 +80,8 @@ class DashUiServiceProvider extends PackageServiceProvider
                 TableCell::class,
                 Pagination::class,
                 ActionLink::class,
+                Tabs::class,
+                TabPanel::class,
             )
             ->hasViews();
     }
