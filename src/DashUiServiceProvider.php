@@ -37,6 +37,7 @@ use Combindma\DashUi\Components\Tag;
 use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
 use Combindma\DashUi\Components\Tooltip;
+use Combindma\DashUi\Components\TopBar;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -82,6 +83,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 ActionLink::class,
                 Tabs::class,
                 TabPanel::class,
+                TopBar::class,
             )
             ->hasViews();
     }

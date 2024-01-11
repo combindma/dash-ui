@@ -26,6 +26,12 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+.top-bar {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto,30rem) 1fr;
+    align-items: center;
+}
+
 /* --------------------------------
 
 Forms
