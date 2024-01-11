@@ -273,7 +273,7 @@ Card
 }
 
 .card {
-    @apply lg:rounded-[12px] lg:before:rounded-[12px];
+    @apply rounded-sm before:rounded-sm lg:rounded-[12px] lg:before:rounded-[12px];
 }
 
 .card__inner {

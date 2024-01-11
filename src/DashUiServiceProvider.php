@@ -18,14 +18,18 @@ use Combindma\DashUi\Components\Dropzone;
 use Combindma\DashUi\Components\EmptyState;
 use Combindma\DashUi\Components\ExpandableSearch;
 use Combindma\DashUi\Components\FlashMessage;
+use Combindma\DashUi\Components\IndexTable;
 use Combindma\DashUi\Components\InlineError;
 use Combindma\DashUi\Components\Input;
 use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
 use Combindma\DashUi\Components\PageHeader;
+use Combindma\DashUi\Components\Pagination;
 use Combindma\DashUi\Components\Popover;
 use Combindma\DashUi\Components\SearchInput;
 use Combindma\DashUi\Components\Select;
+use Combindma\DashUi\Components\TableCell;
+use Combindma\DashUi\Components\TableRow;
 use Combindma\DashUi\Components\Tag;
 use Combindma\DashUi\Components\Textarea;
 use Combindma\DashUi\Components\Thumbnail;
@@ -68,6 +72,10 @@ class DashUiServiceProvider extends PackageServiceProvider
                 CircleLoader::class,
                 Dropzone::class,
                 Tag::class,
+                IndexTable::class,
+                TableRow::class,
+                TableCell::class,
+                Pagination::class,
             )
             ->hasViews();
     }
