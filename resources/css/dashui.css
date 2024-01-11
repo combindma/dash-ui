@@ -67,7 +67,7 @@ Buttons
     line-height: 1;
     box-shadow: 0 1px 0 0 #E3E3E3 inset, 1px 0 0 0 #E3E3E3 inset, -1px 0 0 0 #E3E3E3 inset, 0 -1px 0 0 #B5B5B5 inset;
     background-color: white;
-    @apply text-xs antialiased px-2 py-2;
+    @apply text-xs antialiased px-2.5 py-2;
 }
 
 .btn:hover {
