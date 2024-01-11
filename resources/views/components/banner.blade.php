@@ -1,5 +1,5 @@
 <div class="alert mb-3 alert--is-visible absolute [&.alert--is-visible]:static js-alert">
-    <div class="card">
+    <div class="card rounded-lg before:rounded-lg">
         <div class="bg-white">
             @if($title)
                 <div @class([

@@ -2,6 +2,7 @@
 
 namespace Combindma\DashUi;
 
+use Combindma\DashUi\Components\ActionLink;
 use Combindma\DashUi\Components\Alert;
 use Combindma\DashUi\Components\Avatar;
 use Combindma\DashUi\Components\Badge;
@@ -76,6 +77,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 TableRow::class,
                 TableCell::class,
                 Pagination::class,
+                ActionLink::class,
             )
             ->hasViews();
     }
