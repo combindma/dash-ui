@@ -15,7 +15,7 @@ If you ever dreamed of having a Shopify admin, DashUI offers a suite of UI compo
 If you need assistance with your next project or would like to discuss a custom solution, please feel free to [contact us](mailto:hello@combind.ma) or visit our [website](https://combind.ma?utm_source=github&utm_medium=banner&utm_campaign=package_name) for more information about our services. Let's build something amazing together!
 
 ## Demo
-
+Experience DashUI in action by visiting the [Demo Project](https://github.com/combindma/demo-dashui). The demo provides a practical showcase of the DashUI components, allowing you to see how they can be integrated and customized in a real Laravel application.
 
 ## Installation
 
