@@ -24,11 +24,15 @@ use Combindma\DashUi\Components\InlineError;
 use Combindma\DashUi\Components\Input;
 use Combindma\DashUi\Components\MediaCard;
 use Combindma\DashUi\Components\Modal;
+use Combindma\DashUi\Components\Navigation;
+use Combindma\DashUi\Components\NavigationItem;
+use Combindma\DashUi\Components\NavigationSection;
 use Combindma\DashUi\Components\PageHeader;
 use Combindma\DashUi\Components\Pagination;
 use Combindma\DashUi\Components\Popover;
 use Combindma\DashUi\Components\SearchInput;
 use Combindma\DashUi\Components\Select;
+use Combindma\DashUi\Components\SubNavigationItem;
 use Combindma\DashUi\Components\TableCell;
 use Combindma\DashUi\Components\TableRow;
 use Combindma\DashUi\Components\TabPanel;
@@ -84,6 +88,10 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Tabs::class,
                 TabPanel::class,
                 TopBar::class,
+                Navigation::class,
+                NavigationItem::class,
+                NavigationSection::class,
+                SubNavigationItem::class,
             )
             ->hasViews();
     }

@@ -17,6 +17,7 @@ Usage: codyhouse.co/license
     visibility: hidden;
     transition: visibility 0s 0.3s;
 }
+
 .sidebar:not(.sidebar--static)::after {
     /* overlay layer */
     content: "";
@@ -25,10 +26,11 @@ Usage: codyhouse.co/license
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(235, 235, 235);
+    @apply bg-neutral-900/75;
     transition: background-color 0.3s;
     z-index: 1;
 }
+
 .sidebar:not(.sidebar--static) .sidebar__panel {
     /* content */
     position: absolute;
@@ -40,35 +42,35 @@ Usage: codyhouse.co/license
     height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    background-color: #ebebeb;
-    -webkit-transform: translateX(-100%);transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
     transition: box-shadow 0.3s, -webkit-transform 0.3s;
     transition: box-shadow 0.3s, transform 0.3s;
     transition: box-shadow 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
+
 .sidebar:not(.sidebar--static).sidebar--right-on-mobile .sidebar__panel {
     left: auto;
     right: 0;
-    -webkit-transform: translateX(100%);transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
 }
+
 .sidebar:not(.sidebar--static).sidebar--is-visible {
     visibility: visible;
     transition: none;
 }
+
 .sidebar:not(.sidebar--static).sidebar--is-visible::after {
-    @apply bg-neutral-900/75;
+    @apply bg-gray-900/[.85];
 }
+
 .sidebar:not(.sidebar--static).sidebar--is-visible .sidebar__panel {
     transform: translateX(0);
     @apply shadow-md;
 }
 
 /* end mobile version */
-
-.sidebar {
-    background-color: rgb(235, 235, 235);
-}
-
 .sidebar__header {
     display: flex;
     align-items: center;
@@ -84,15 +86,19 @@ Usage: codyhouse.co/license
     height: var(--size);
     display: flex;
     border-radius: 50%;
+    @apply bg-white;
     @apply shadow-md;
     transition: 0.2s;
     flex-shrink: 0;
 }
+
 .sidebar__close-btn .icon {
     display: block;
     margin: auto;
 }
+
 .sidebar__close-btn:hover {
+    @apply bg-white;
     @apply shadow-lg;
 }
 
@@ -101,22 +107,19 @@ Usage: codyhouse.co/license
     flex-shrink: 0;
     flex-grow: 1;
 }
+
 .sidebar--static .sidebar__header {
     display: none;
 }
 
-.sidebar--static .sidebar__panel {
-    position: fixed;
-}
-
 .sidebar--sticky-on-desktop {
-    position: -webkit-sticky;
     position: sticky;
     @apply top-3 lg:top-5;
     max-height: calc(100vh - 0.75rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
 @media (min-width: 64rem) {
     .sidebar--sticky-on-desktop {
         max-height: calc(100vh - 1.125rem);
@@ -128,6 +131,7 @@ Usage: codyhouse.co/license
     opacity: 0;
     /* hide sidebar - or other elements using the .sidebar-loaded:show class - while it is initialized in JS */
 }
+
 .sidebar--loaded {
     opacity: 1;
 }
@@ -144,6 +148,7 @@ Usage: codyhouse.co/license
 .sidebar--static\@xs::before {
     content: "mobile";
 }
+
 @media (min-width: 32rem) {
     .sidebar--static\@xs::before {
         content: "static";
@@ -153,6 +158,7 @@ Usage: codyhouse.co/license
 .sidebar--static\@sm::before {
     content: "mobile";
 }
+
 @media (min-width: 48rem) {
     .sidebar--static\@sm::before {
         content: "static";
@@ -162,6 +168,7 @@ Usage: codyhouse.co/license
 .sidebar--static\@md::before {
     content: "mobile";
 }
+
 @media (min-width: 64rem) {
     .sidebar--static\@md::before {
         content: "static";
@@ -171,6 +178,7 @@ Usage: codyhouse.co/license
 .sidebar--static\@lg::before {
     content: "mobile";
 }
+
 @media (min-width: 80rem) {
     .sidebar--static\@lg::before {
         content: "static";
@@ -180,6 +188,7 @@ Usage: codyhouse.co/license
 .sidebar--static\@xl::before {
     content: "mobile";
 }
+
 @media (min-width: 90rem) {
     .sidebar--static\@xl::before {
         content: "static";
