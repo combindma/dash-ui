@@ -9,6 +9,7 @@ class Dropzone extends Component
     public function __construct(
         public string $label,
         public string $id,
+        public ?string $helpText = null,
     ) {
     }
 

@@ -6,9 +6,7 @@
 
         <div class="text-center">
             @if(isset($heading))
-                <div {{ $heading->attributes->class(['mb-2 text-sm font-bold']) }}>
-                    {{ $heading }}
-                </div>
+                <div {{ $heading->attributes->class(['mb-2 text-sm font-bold']) }}>{{ $heading }}</div>
             @endif
 
             <div class="max-w-xl flex flex-col justify-center items-center">{{ $slot }}</div>

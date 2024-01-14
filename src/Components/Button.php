@@ -10,7 +10,7 @@ class Button extends Component
         public string $as = 'button',
         public string $variant = 'default',
         public string $tone = 'basic',
-        public string $size = '',
+        public ?string $size = null,
         public bool $disabled = false,
         public bool $fullWidth = false,
         public bool $pressed = false,
