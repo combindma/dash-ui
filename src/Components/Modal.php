@@ -8,7 +8,7 @@ class Modal extends Component
 {
     public function __construct(
         public string $activator,
-        public string $title = '',
+        public ?string $title = null,
         public string $size = 'normal'
     ) {
     }

@@ -6,7 +6,7 @@
     'text-red-800 hover:bg-red-100/80 active:bg-red-200/60' => $destructive,
     ]) }}>
         <span class="flex items-center gap-x-1">
-             @if(isset($icon))
+            @if(isset($icon))
                 {{ $icon }}
             @endif
             <span class="text-sm">{{ $label }}</span>

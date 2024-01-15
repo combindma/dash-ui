@@ -8,8 +8,8 @@ class PageHeader extends Component
 {
     public function __construct(
         public string $title,
-        public string $backAction = '',
-        public string $subtitle = '',
+        public ?string $backAction = null,
+        public ?string $subtitle = null,
     ) {
     }
 

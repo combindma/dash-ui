@@ -8,8 +8,8 @@ class ActionLink extends Component
 {
     public function __construct(
         public string $label,
-        public ?string $helpText = null,
         public string $as = 'button',
+        public ?string $helpText = null,
         public bool $active = false,
         public bool $destructive = false,
     ) {

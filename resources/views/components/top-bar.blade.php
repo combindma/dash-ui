@@ -16,7 +16,11 @@
         <div class="ml-auto">
             <button type="button" class="flex items-center rounded-md bg-neutral-700/60 px-0.5 hover:cursor-pointer hover:bg-neutral-700 lg:pr-0.5 lg:py-0.5 lg:rounded-lg lg:pl-2" aria-controls="popover-user-menu">
                 <span class="mr-2 hidden text-white lg:inline-block">{{ $userName }}</span>
-                <x-dashui-avatar :initials="$userInitials" class="bg-rose-700"/>
+                @if($avatar)
+                    <x-dashui-avatar src="{{ $avatar }}"/>
+                @else
+                    <x-dashui-avatar :initials="$userInitials" class="bg-rose-700"/>
+                @endif
             </button>
             <x-dashui-popover id="popover-user-menu" role="dialog">
                 {{ $userMenu }}
