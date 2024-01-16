@@ -3,7 +3,6 @@
     'relative flex items-center w-full rounded-lg',
     'bg-white font-bold' => $selected,
     'hover:bg-neutral-50/50 active:bg-white font-[550]' => !$selected,
-
 ])>
         <a href="{{ $url }}" @if($external) target="_blank" rel="noopener noreferrer" @endif @class(['flex w-full cursor-pointer items-center gap-x-2 rounded-lg pr-1 pl-3 py-1', 'navigation--active' => $childSelected])>
             <span class="inline-block text-neutral-700/95">{{ $icon }}</span>

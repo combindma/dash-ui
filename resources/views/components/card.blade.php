@@ -15,7 +15,7 @@
                     @endif
                 </div>
                 @if(isset($subheading))
-                    <p {{ $subheading->attributes->class(['mt-2 text-sm']) }}>{{ $subheading }}</p>
+                    <p {{ $subheading->attributes->class(['mt-2 text-sm text-neutral-600']) }}>{{ $subheading }}</p>
                 @endif
             </div>
         @endif

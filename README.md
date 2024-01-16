@@ -91,7 +91,7 @@ export default {
 Import the css files and add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
 ```css
 @import '../../node_modules/system-font-css/system-font.css';
-@import '../../vender/combindma/dash-ui/resources/css/dashui.css';
+@import '../../vendor/combindma/dash-ui/resources/css/dashui.css';
 
 @tailwind base;
 @tailwind components;
