@@ -9,7 +9,7 @@ Usage: codyhouse.co/license
 :root {
     --expandable-search-size-compact: 2.2rem;
     /* height and width - compact version /  height - expanded version */
-    --expandable-search-size-expanded: 10rem;
+    --expandable-search-size-expanded: 18rem;
     /* width - expanded version */
     --expandable-search-radius: 6px;
     /* border radius */
