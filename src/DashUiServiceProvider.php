@@ -14,6 +14,7 @@ use Combindma\DashUi\Components\CalloutCard;
 use Combindma\DashUi\Components\Card;
 use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\CircleLoader;
+use Combindma\DashUi\Components\CopyToClip;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\Dropzone;
 use Combindma\DashUi\Components\EmptyState;
@@ -92,6 +93,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 NavigationItem::class,
                 NavigationSection::class,
                 SubNavigationItem::class,
+                CopyToClip::class,
             )
             ->hasViews();
     }

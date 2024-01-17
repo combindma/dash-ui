@@ -1,5 +1,5 @@
 <div id="{{ $activator }}" @class(['bg-neutral-900/75 modal modal--animate-translate-up js-modal' ,'flex items-end justify-center lg:items-center lg:p-8' => ($size !== 'fullScreen')]) data-modal-prevent-scroll="body">
-    <div {{ $attributes->class([
+    <form {{ $attributes->class([
     'modal__content w-full max-h-full overflow-auto bg-white lg:rounded-[16px] shadow-lg' => ($size !== 'fullScreen'),
     'lg:max-w-md' => ($size == 'small'),
     'lg:max-w-2xl' => ($size == 'normal'),
@@ -35,5 +35,5 @@
                 </div>
             </footer>
         @endif
-    </div>
+    </form>
 </div>

@@ -8,3 +8,4 @@ import './components/_1_smooth-scrolling.js';
 import './components/_1_tabs.js';
 import './components/_1_flash-message.js';
 import './components/_1_tooltip.js';
+import './components/_2_copy-to-clip.js';

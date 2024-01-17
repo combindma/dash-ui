@@ -344,6 +344,7 @@ Card
     border-radius: 6px;
     box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.13) inset, -1px 0 0 0 rgba(0, 0, 0, 0.13) inset, 0 -1px 0 0 rgba(0, 0, 0, 0.17) inset, 0 1px 0 0 rgba(204, 204, 204, 0.5) inset;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .card::before {
@@ -442,4 +443,42 @@ Circle Loader
     100% {
         transform: rotate(405deg);
     }
+}
+
+
+/* --------------------------------
+
+Copy To Clipboard
+
+-------------------------------- */
+.copy-to-clip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    @apply rounded;
+    @apply bg-gray-900/10;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.copy-to-clip:hover {
+    @apply bg-gray-900/[.15];
+}
+.copy-to-clip:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(221 39% 11% / 0.35);
+}
+
+.copy-to-clip__icon-check {
+    stroke-dashoffset: 8.49;
+    stroke-dasharray: 8.49 8.49;
+    transition: stroke-dashoffset 0.3s;
+}
+
+.copy-to-clip--copied {
+    /* added in JS when content has been copied */
+}
+.copy-to-clip--copied .copy-to-clip__icon-check {
+    stroke-dashoffset: 0;
 }
