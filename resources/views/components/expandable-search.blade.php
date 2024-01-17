@@ -1,4 +1,4 @@
-<form class="relative inline-block select-none js-expandable-search">
+<div class="relative inline-block select-none js-expandable-search">
     <label class="sr-only" for="expandable-search">Search</label>
     <input {{ $attributes->class(['expandable-search__input appearance-none box-border border-0 pl-2 lg:pl-3 text-sm text-transparent border-0 overflow-hidden rounded-lg hover:cursor-pointer focus:ring-2 focus:ring-primary-700 js-expandable-search__input']) }}>
 
@@ -10,4 +10,4 @@
             </g>
         </svg>
     </button>
-</form>
+</div>
