@@ -6,8 +6,8 @@
 ]) }}>
         @if(isset($heading))
             <div class="mb-3">
-                <div class="flex justify-between items-center">
-                    <div {{ $heading->attributes->class(['text-sm font-semibold']) }}>
+                <div {{ $heading->attributes->class(['flex justify-between items-center']) }}>
+                    <div class="text-sm font-semibold">
                         {{ $heading }}
                     </div>
                     @if(isset($actions))
@@ -15,7 +15,7 @@
                     @endif
                 </div>
                 @if(isset($subheading))
-                    <p {{ $subheading->attributes->class(['mt-2 text-sm text-neutral-600']) }}>{{ $subheading }}</p>
+                    <div {{ $subheading->attributes->class(['mt-2 text-sm text-neutral-600']) }}>{{ $subheading }}</div>
                 @endif
             </div>
         @endif
