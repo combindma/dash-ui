@@ -1,12 +1,12 @@
 <div class="autocomplete relative select-auto js-select-auto js-autocomplete" data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
     <!-- select -->
-    <select class="js-select-auto__select">
+    <select {{ $attributes->class(['js-select-auto__select']) }}>
         {{ $slot }}
     </select>
 
     <!-- input -->
     <div class="select-auto__input-wrapper">
-        <x-dashui-input {{ $attributes->class(['js-autocomplete__input js-select-auto__input']) }}/>
+        <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off"/>
 
         <div class="select-auto__input-icon-wrapper">
             <!-- arrow icon -->
