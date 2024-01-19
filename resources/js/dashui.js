@@ -10,3 +10,4 @@ import './components/_1_flash-message.js';
 import './components/_1_tooltip.js';
 import './components/_2_autocomplete.js';
 import './components/_2_copy-to-clip.js';
+import './components/_3_select-autocomplete.js';

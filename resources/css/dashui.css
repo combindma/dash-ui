@@ -5,6 +5,7 @@
 @import "components/_1_tooltip.css";
 @import "components/_1_expandable-search.css";
 @import "components/_2_autocomplete.css";
+@import "components/_3_select-autocomplete.css";
 
 :root {
     --top-bar-height: 3.75rem;

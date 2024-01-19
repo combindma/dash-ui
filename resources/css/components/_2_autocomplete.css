@@ -83,5 +83,5 @@ Usage: codyhouse.co/license
 }
 .autocomplete__item:focus {
     outline: none;
-    @apply bg-indigo-700/[.15];
+    @apply bg-primary-700/[.15];
 }
