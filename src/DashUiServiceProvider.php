@@ -4,6 +4,7 @@ namespace Combindma\DashUi;
 
 use Combindma\DashUi\Components\ActionLink;
 use Combindma\DashUi\Components\Alert;
+use Combindma\DashUi\Components\Autocomplete;
 use Combindma\DashUi\Components\Avatar;
 use Combindma\DashUi\Components\Badge;
 use Combindma\DashUi\Components\Banner;
@@ -94,6 +95,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 NavigationSection::class,
                 SubNavigationItem::class,
                 CopyToClip::class,
+                Autocomplete::class,
             )
             ->hasViews();
     }

@@ -1,0 +1,87 @@
+/* --------------------------------
+
+File#: _2_autocomplete
+Title: Autocomplete
+Descr: Autocomplete plugin for input elements
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --autocomplete-dropdown-vertical-gap: 4px;
+    /* gap between input and results list */
+    --autocomplete-dropdown-max-height: 150px;
+    --autocomplete-dropdown-scrollbar-width: 6px;
+    /* custom scrollbar width - webkit browsers */
+}
+
+.autocomplete__loader {
+    /* loader visible while searching */
+    /* CSS variables inherited from the circle-loader component */
+    --circle-loader-v1-size: 1em;
+    --circle-loader-v1-stroke-width: 2px;
+}
+
+.autocomplete:not(.autocomplete--searching) .autocomplete__loader {
+    /* .autocomplete--searching is used to show the loader element - added in JS */
+    display: none;
+}
+
+/* results dropdown  */
+.autocomplete__results {
+    position: absolute;
+    @apply z-[5];
+    width: 100%;
+    left: 0;
+    top: calc(100% + var(--autocomplete-dropdown-vertical-gap));
+    transform: translateY(4px);
+    /* slide in animation */
+    @apply bg-white;
+    @apply rounded-lg;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s 0.3s, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    overflow: hidden;
+}
+.autocomplete--results-visible .autocomplete__results {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateY(0);
+}
+
+.autocomplete__list {
+    max-height: var(--autocomplete-dropdown-max-height);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* custom scrollbar */
+}
+.autocomplete__list::-webkit-scrollbar {
+    /* scrollbar width */
+    width: var(--autocomplete-dropdown-scrollbar-width);
+}
+.autocomplete__list::-webkit-scrollbar-track {
+    /* progress bar */
+    @apply bg-gray-900/[.08];
+    border-radius: 0;
+}
+.autocomplete__list::-webkit-scrollbar-thumb {
+    /* handle */
+    @apply bg-gray-900/[.12];
+    border-radius: 0;
+}
+.autocomplete__list::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-900/20;
+}
+
+/* single result item */
+.autocomplete__item {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.autocomplete__item:hover {
+    @apply bg-gray-900/[.07];
+}
+.autocomplete__item:focus {
+    outline: none;
+    @apply bg-indigo-700/[.15];
+}

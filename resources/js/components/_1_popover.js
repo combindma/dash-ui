@@ -257,7 +257,7 @@
                 if(element.popoverIsOpen) element.togglePopover(false, false);
             });
         });
-        // take into account additinal scrollable containers
+        // take into account additional scrollable containers
         for(var j = 0; j < scrollingContainers.length; j++) {
             var scrollingContainer = document.querySelector(scrollingContainers[j]);
             if(scrollingContainer) {
