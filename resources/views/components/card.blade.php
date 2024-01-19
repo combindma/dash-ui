@@ -7,7 +7,7 @@
         @if(isset($heading))
             <div class="mb-3">
                 <div {{ $heading->attributes->class(['flex justify-between items-center']) }}>
-                    <div class="text-sm font-semibold">
+                    <div class="font-semibold">
                         {{ $heading }}
                     </div>
                     @if(isset($actions))
@@ -15,7 +15,7 @@
                     @endif
                 </div>
                 @if(isset($subheading))
-                    <div {{ $subheading->attributes->class(['mt-2 text-sm text-neutral-600']) }}>{{ $subheading }}</div>
+                    <div {{ $subheading->attributes->class(['mt-2 text-neutral-600']) }}>{{ $subheading }}</div>
                 @endif
             </div>
         @endif
@@ -24,7 +24,7 @@
             <x-dashui-divider class="mb-3"/>
         @endif
 
-        <div class="text-sm">{{ $slot }}</div>
+        <div>{{ $slot }}</div>
 
         @if(isset($footer))
             <footer {{ $footer->attributes->class(['mt-4 flex gap-2 justify-end']) }}>
