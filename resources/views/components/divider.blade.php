@@ -1,1 +1,1 @@
-<hr {{ $attributes->class(['border-1 border-neutral-300']) }}>
+<hr {{ $attributes->class(['border-1 border-[rgba(0,0,0,0.08)]']) }}>
