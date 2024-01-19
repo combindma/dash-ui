@@ -455,8 +455,8 @@ Copy To Clipboard
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     @apply rounded;
     @apply bg-gray-900/10;
     cursor: pointer;
