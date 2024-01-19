@@ -12,8 +12,8 @@
     'block text-[#8a8a8a]',
     'p-1.5' => ($size == 'xs'),
     'p-2.5' => ($size == 'sm'),
-    'p-3' => ($size == 'md'),
-    'p-5' => ($size == 'lg'),
+    'p-4' => ($size == 'md'),
+    'p-6' => ($size == 'lg'),
     ])>{{ $slot }}</span>
     @endif
 </span>
