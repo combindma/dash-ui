@@ -39,4 +39,5 @@
     }
     document.addEventListener('DOMContentLoaded', initializeAutocomplete);
     document.addEventListener('livewire:init', initializeAutocomplete);
+    document.addEventListener('livewire:reload', initializeAutocomplete);
 </script>
