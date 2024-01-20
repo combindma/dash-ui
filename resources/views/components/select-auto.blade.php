@@ -1,6 +1,6 @@
 <div class="autocomplete relative select-auto js-select-auto js-autocomplete" data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
     <!-- select -->
-    <select {{ $attributes->class(['js-select-auto__select']) }}>
+    <select {{ $attributes->class(['js-select-auto__select hidden']) }}>
         {{ $slot }}
     </select>
 
