@@ -6,7 +6,7 @@
     'pr-7' => !$iconLeft,
     'pl-8' => $iconLeft,
 ]) }}>
-    <button @class([
+    <button @if($preventSubmit) type="button" @else type="submit" @endif @class([
     'absolute top-0 flex items-center justify-center h-full w-6 text-neutral-500',
     'right-0 mr-1' => !$iconLeft,
     'left-0 ml-1' => $iconLeft
