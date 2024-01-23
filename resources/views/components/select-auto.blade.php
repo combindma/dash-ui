@@ -6,7 +6,11 @@
 
     <!-- input -->
     <div class="select-auto__input-wrapper">
-        <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off"/>
+        @if($required)
+            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off" required/>
+        @else
+            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off"/>
+        @endif
 
         <div class="select-auto__input-icon-wrapper">
             <!-- arrow icon -->
@@ -47,3 +51,6 @@
 
     <p class="sr-only" aria-live="polite" aria-atomic="true"><span class="js-autocomplete__aria-results">0</span> results found.</p>
 </div>
+@if($helpText)
+<p class="text-xs text-neutral-600">{{ $helpText }}</p>
+@endif

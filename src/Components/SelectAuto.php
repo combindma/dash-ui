@@ -6,6 +6,13 @@ use Illuminate\View\Component;
 
 class SelectAuto extends Component
 {
+    public function __construct(
+        public ?string $helpText = null,
+        public bool $required = false
+    ) {
+
+    }
+
     public function render()
     {
         return view('dash-ui::components.select-auto');
