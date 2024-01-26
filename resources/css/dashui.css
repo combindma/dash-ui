@@ -90,7 +90,7 @@ Frame
     width: 1.3125rem;
     height: 1.75rem;
 }
-.sub-navigation--active li:not(:last-child) a:before {
+.sub-navigation--active .sub-navigation--before:before {
     content: url("data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2228%22%20viewBox%3D%220%200%2021%2028%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%229%22%20width%3D%221.5%22%20height%3D%2228%22%20fill%3D%22%23B5B5B5%22%2F%3E%3C%2Fsvg%3E");
     position: absolute;
     top: 0;
