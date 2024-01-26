@@ -365,7 +365,7 @@ Card
 }
 
 .card {
-    @apply rounded-sm before:rounded-sm lg:rounded-[12px] lg:before:rounded-[12px];
+    @apply rounded-md before:rounded-md lg:rounded-[12px] lg:before:rounded-[12px];
 }
 
 .card__inner {
