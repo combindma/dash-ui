@@ -1,0 +1,141 @@
+/* --------------------------------
+
+File#: _1_list-filter
+Title: List Filter
+Descr: A list of filterable search items
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --list-filter-height: 190px;
+}
+
+.list-filter__form {
+    overflow: hidden;
+}
+
+.list-filter__search {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.list-filter__search::-webkit-search-decoration, .list-filter__search::-webkit-search-cancel-button, .list-filter__search::-webkit-search-results-button, .list-filter__search::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+.list-filter__search::-ms-clear, .list-filter__search::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.list-filter__search:focus {
+    outline: none;
+}
+.list-filter__search:focus + .list-filter__focus-marker {
+    opacity: 1;
+}
+.list-filter__search:-moz-placeholder-shown ~ .list-filter__search-cancel-btn {
+    display: none;
+}
+.list-filter__search:-ms-input-placeholder ~ .list-filter__search-cancel-btn {
+    display: none;
+}
+.list-filter__search:placeholder-shown ~ .list-filter__search-cancel-btn {
+    display: none;
+}
+
+.list-filter__search-cancel-btn {
+    /* custom search cancel button */
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    @apply text-gray-500;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.list-filter__search-cancel-btn:hover {
+    opacity: 0.85;
+}
+
+.list-filter__focus-marker {
+    display: block;
+    height: 1em;
+    width: 3px;
+    @apply bg-primary-700;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 0.5em);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.list-filter__list-wrapper {
+    //position: relative;
+    height: var(--list-filter-height);
+}
+
+.list-filter__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.list-filter__item {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    transition: background-color 0.2s;
+}
+.list-filter__item:hover {
+    @apply bg-gray-900/[.07];
+}
+
+.list-filter__status {
+    display: block;
+    flex-shrink: 0;
+    --size: 8px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+}
+.list-filter__item--user-active .list-filter__status {
+    @apply bg-teal-600;
+}
+.list-filter__item--user-active .list-filter__status::after {
+    content: "user active";
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+.list-filter__item--user-pending .list-filter__status {
+    @apply bg-amber-400;
+}
+.list-filter__item--user-pending .list-filter__status::after {
+    content: "user pending";
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+.list-filter__action-btn {
+    display: flex;
+    flex-shrink: 0;
+    @apply bg-white;
+    @apply border border-gray-900/[.15];
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.list-filter__action-btn .icon {
+    margin: auto;
+}
+.list-filter__action-btn:hover {
+    @apply border-red-600 text-red-600;
+}

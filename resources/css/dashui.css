@@ -1,9 +1,11 @@
 @import "components/_1_modal-window.css";
 @import "components/_1_popover.css";
 @import "components/_1_radios-checkboxes.css";
+@import "components/_1_custom-checkbox.css";
 @import "components/_1_responsive-sidebar.css";
 @import "components/_1_tooltip.css";
 @import "components/_1_expandable-search.css";
+@import "components/_1_list-filter.css";
 @import "components/_2_autocomplete.css";
 @import "components/_3_select-autocomplete.css";
 
@@ -483,4 +485,33 @@ Copy To Clipboard
 }
 .copy-to-clip--copied .copy-to-clip__icon-check {
     stroke-dashoffset: 0;
+}
+
+
+/* --------------------------------
+
+Title: Multiple Custom Select
+
+-------------------------------- */
+.multi-select-v2__label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.multi-select-v2__label:hover {
+    transition: background-color 0.2s;
+    @apply bg-gray-900/[.07];
+}
+.multi-select-v2__label.multi-select-v2__label--checked {
+    @apply bg-neutral-100;
+}
+.multi-select-v2__label.multi-select-v2__label--checked:hover {
+    @apply bg-neutral-200;
+}
+
+.multi-select-v2__checkbox {
+    --custom-checkbox-size: 18px;
+    --custom-checkbox-marker-size: 14px;
+    width: var(--custom-checkbox-size);
+    height: var(--custom-checkbox-size);
 }

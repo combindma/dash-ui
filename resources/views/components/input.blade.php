@@ -5,7 +5,7 @@
         </div>
     @endif
     <input {{ $attributes->class([
-    'block w-full box-border rounded-lg text-sm border-0 py-1 mb-1.5 text-neutral-900 ring-1 ring-inset placeholder:text-neutral-500 focus:ring-2 focus:ring-inset focus:ring-primary-700',
+    'block w-full box-border rounded-lg border-0 py-1 mb-1.5 text-neutral-900 ring-1 ring-inset placeholder:text-sm placeholder:text-neutral-500 focus:ring-2 focus:ring-inset focus:ring-primary-700',
     'pl-7' => $prefix,
     'pr-12' => $suffix,
     'ring-neutral-500/90' => !$error,

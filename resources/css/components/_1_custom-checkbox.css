@@ -1,0 +1,128 @@
+/* --------------------------------
+
+File#: _1_custom-checkbox
+Title: Custom Checkbox
+Descr: Replace the native checkbox button with a custom element (e.g., an icon)
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --custom-checkbox-size: 20px;
+    --custom-checkbox-radius: 4px;
+    --custom-checkbox-border-width: 1px;
+    --custom-checkbox-marker-size: 18px;
+}
+
+.custom-checkbox {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: var(--custom-checkbox-size);
+}
+
+.custom-checkbox__input {
+    position: relative;
+    /* hide native input */
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    height: 1em;
+    width: 1em;
+    display: block;
+    z-index: 1;
+}
+
+.custom-checkbox__control {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    @apply text-gray-400/[.65];
+    /* unchecked color */
+}
+.custom-checkbox__control::before, .custom-checkbox__control::after {
+    content: "";
+    position: absolute;
+}
+.custom-checkbox__control::before {
+    /* focus circle */
+    width: 160%;
+    height: 160%;
+    background-color: currentColor;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    border-radius: 50%;
+    will-change: transform;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.custom-checkbox__control::after {
+    /* custom checkbox */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* custom checkbox style */
+    @apply bg-white;
+    border-radius: var(--custom-checkbox-radius);
+    box-shadow: inset 0 0 0 var(--custom-checkbox-border-width) currentColor, 0 0.1px 0.3px rgba(0, 0, 0, 0.06),0 1px 2px rgba(0, 0, 0, 0.12);
+    /* border */
+}
+
+.custom-checkbox__input:checked ~ .custom-checkbox__control::after,
+.custom-checkbox__input:indeterminate ~ .custom-checkbox__control::after {
+    background-color: currentColor;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--custom-checkbox-marker-size);
+    box-shadow: none;
+}
+
+.custom-checkbox__input:checked ~ .custom-checkbox__control {
+    @apply text-primary-700;
+    /* checked color */
+}
+.custom-checkbox__input:checked ~ .custom-checkbox__control::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolyline points='2.5 8 6.5 12 13.5 3' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+
+.custom-checkbox__input:indeterminate ~ .custom-checkbox__control::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cline x1='2' y1='8' x2='14' y2='8' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.custom-checkbox__input:active ~ .custom-checkbox__control {
+    transform: scale(0.9);
+}
+
+.custom-checkbox__input:checked:active ~ .custom-checkbox__control,
+.custom-checkbox__input:indeterminate:active ~ .custom-checkbox__control {
+    transform: scale(1);
+}
+
+.custom-checkbox__input:focus ~ .custom-checkbox__control::before {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* --icon */
+.custom-checkbox--icon {
+    --custom-checkbox-size: 32px;
+}
+.custom-checkbox--icon .custom-checkbox__control::after {
+    display: none;
+}
+.custom-checkbox--icon .icon {
+    display: block;
+    color: inherit;
+    position: relative;
+    z-index: 1;
+}

@@ -15,6 +15,7 @@ use Combindma\DashUi\Components\CalloutCard;
 use Combindma\DashUi\Components\Card;
 use Combindma\DashUi\Components\CardStack;
 use Combindma\DashUi\Components\CircleLoader;
+use Combindma\DashUi\Components\Combobox;
 use Combindma\DashUi\Components\CopyToClip;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\Dropzone;
@@ -78,6 +79,7 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Input::class,
                 Textarea::class,
                 Select::class,
+                Combobox::class,
                 SearchInput::class,
                 ExpandableSearch::class,
                 CircleLoader::class,
