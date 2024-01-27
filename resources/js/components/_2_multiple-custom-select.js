@@ -78,8 +78,8 @@
                 var label = checkbox.closest('label').textContent.trim(); // Adjust based on your actual DOM structure
                 // Create tag element for each checked label
                 var tagElement = document.createElement('span');
-                tagElement.className = 'inline-flex items-center min-h-2 bg-neutral-200 rounded-md py-1 px-1.5';
-                tagElement.innerHTML = `<span class="text-sm leading-none">${label}</span>`;
+                tagElement.className = 'inline-flex items-center min-h-2 bg-neutral-200 rounded-md py-1 px-2';
+                tagElement.innerHTML = `<span class="max-w-[160px] truncate text-xs">${label}</span>`;
 
                 // Append the tag element to the container
                 selectedItemsContainer.appendChild(tagElement);
