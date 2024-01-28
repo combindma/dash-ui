@@ -34,9 +34,9 @@
         </div>
     </div>
 
-    <div class="flex justify-between text-sm mt-1.5">
-        <p class="text-neutral-500"><span class="js-multi-select-v2__selected-items-counter">0</span> {{ $selectedText }}</p>
-        <button class="cursor-pointer underline js-multi-select-v2__reset" type="button">{{ $resetText }}</button>
+    <div class="flex justify-between mt-0.5">
+        <p class="text-xs text-neutral-500"><span class="js-multi-select-v2__selected-items-counter">0</span> {{ $selectedText }}</p>
+        <button class="text-xs cursor-pointer underline js-multi-select-v2__reset" type="button">{{ $resetText }}</button>
     </div>
     <div class="flex flex-wrap items-center gap-1.5 mt-1 js-multi-select-v2__selected-items"></div>
 </div>

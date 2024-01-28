@@ -8,6 +8,7 @@ class SelectAuto extends Component
 {
     public function __construct(
         public ?string $helpText = null,
+        public string $placeholderText = '',
         public bool $required = false
     ) {
 

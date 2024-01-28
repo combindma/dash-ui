@@ -7,9 +7,9 @@
     <!-- input -->
     <div class="select-auto__input-wrapper">
         @if($required)
-            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off" required/>
+            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off" placeholder="{{ $placeholderText }}" required/>
         @else
-            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off"/>
+            <x-dashui-input class="js-autocomplete__input js-select-auto__input" autocomplete="off" placeholder="{{ $placeholderText }}"/>
         @endif
 
         <div class="select-auto__input-icon-wrapper">
@@ -28,7 +28,7 @@
     </div>
 
     <!-- dropdown -->
-    <div class="autocomplete__results shadow-[0px_4px_6px_-2px_rgba(26,26,26,0.20)] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)_inset] select-auto__results js-autocomplete__results">
+    <div class="autocomplete__results rounded-lg bg-white border border-gray-300 shadow-[0px_4px_6px_-2px_rgba(26,26,26,0.20)] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)_inset] select-auto__results js-autocomplete__results">
         <ul class="autocomplete__list js-autocomplete__list">
             <li class="select-auto__group-title py-2 lg:py-3 px-3 lg:px-5 text-gray-500  leading-none hidden js-autocomplete__result" data-autocomplete-template="optgroup" role="presentation">
                 <span class="truncate text-sm" data-autocomplete-label></span>
