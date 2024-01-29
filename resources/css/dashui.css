@@ -43,7 +43,7 @@ Frame
 
 .frame {
     position: relative;
-    padding-top: var(--top-bar-height);
+    padding-top: calc(.15rem + var(--top-bar-height));
     @apply bg-neutral-200/50 lg:flex;
 }
 
