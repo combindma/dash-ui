@@ -1,4 +1,4 @@
-<nav class="relative flex h-full flex-grow flex-col py-4 z-[1] lg:py-6">
+<nav class="relative flex h-full flex-grow flex-col py-3 z-[1] lg:py-5">
     {{ $slot }}
 </nav>
 
