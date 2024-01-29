@@ -72,7 +72,7 @@ Usage: codyhouse.co/license
 }
 
 .list-filter__list-wrapper {
-    //position: relative;
+    position: relative;
     height: var(--list-filter-height);
 }
 
