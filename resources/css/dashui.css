@@ -493,11 +493,6 @@ Copy To Clipboard
 Title: Multiple Custom Select
 
 -------------------------------- */
-.multi-select-v2__label {
-    display: flex;
-    align-items: center;
-    user-select: none;
-}
 .multi-select-v2__label:hover {
     transition: background-color 0.2s;
     @apply bg-gray-900/[.07];

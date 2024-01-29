@@ -12,11 +12,11 @@
                 </button>
             </div>
 
-            <div class="absolute w-full rounded-lg bg-white border border-gray-300 overflow-hidden mt-0.5 z-[3] list-filter__list-wrapper js-multi-select-v2__wrapper" style="display: none;">
+            <div class="relative w-full rounded-lg bg-white border border-gray-300 overflow-hidden mt-0.5 z-[3] list-filter__list-wrapper js-multi-select-v2__wrapper" style="display: none;">
                 <ul class="p-2 list-filter__list js-list-filter__list">
                     @foreach($options as $option)
                         <li class="js-list-filter__item">
-                            <label class="cursor-pointer rounded-md px-2 py-2 multi-select-v2__label lg:px-3">
+                            <label class="cursor-pointer rounded-md px-2 py-2 flex items-center user-select lg:px-3">
                             <span class="pointer-events-none custom-checkbox multi-select-v2__checkbox mr-1.5 lg:mr-2">
                                 <input class="custom-checkbox__input js-multi-select-v2__input" type="checkbox" name="{{ $inputName }}" value="{{ $option['value'] }}" @checked($option['selected']??false)/>
                                 <span class="custom-checkbox__control" aria-hidden="true"></span>
