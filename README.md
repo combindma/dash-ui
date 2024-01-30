@@ -25,18 +25,18 @@ You can install the package via composer:
 composer require combindma/dash-ui
 ```
 
-Optionally, if you intend to use [Blade Google Material Design Icons](https://github.com/codeat3/blade-google-material-design-icons) as it is the case in the demo.
+Optionally, if you intend to use [Blade Google Material Design Icons](https://github.com/codeat3/blade-google-material-design-icons) as it is the case in the demo, run this command:
 
 ```bash
 composer require codeat3/blade-google-material-design-icons
 ```
 
-We recommend you to enable icon caching using this command:
+We recommend you to enable icon caching using:
 ```bash
 php artisan icons:cache
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the views using:
 
 ```bash
 php artisan vendor:publish --tag="dash-ui-views"
