@@ -9,7 +9,7 @@
         <img src="{{ $src }}" alt="{{ $alt??'image' }}" class="object-cover w-full">
     @else
         <span @class([
-    'block text-[#8a8a8a]',
+    'block text-neutral-500',
     'p-1.5' => ($size == 'xs'),
     'p-2.5' => ($size == 'sm'),
     'p-4' => ($size == 'md'),

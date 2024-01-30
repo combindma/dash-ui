@@ -2,7 +2,7 @@
     <div class="relative h-full gap-2 top-bar__inner">
         <div class="block lg:hidden">
             <button type="button" aria-controls="{{ $menuId }}" class="flex items-center rounded-md text-white p-1.5 hover:cursor-pointer hover:bg-neutral-600">
-                <x-gmdi-menu-r class="h-5 w-5"/>
+                <svg viewBox="0 0 20 20" class="block h-6 w-6 shrink-0 fill-current leading-none text-inherit"><path fill-rule="evenodd" d="M3 4.75a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path fill-rule="evenodd" d="M3 15.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path></svg>
             </button>
         </div>
         <div class="hidden lg:block">

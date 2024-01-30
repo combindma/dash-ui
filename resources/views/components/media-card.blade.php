@@ -16,7 +16,7 @@
                             </div>
                             @if(isset($actions))
                                 <x-dashui-button variant="subtle" class="group p-1" aria-controls="{{ $id }}">
-                                    <x-gmdi-more-horiz class="w-6 h-6 text-neutral-400 group-hover:text-neutral-600"/>
+                                    <svg viewBox="0 0 20 20" class="w-6 h-6 fill-neutral-400 group-hover:fill-neutral-600"><path d="M6 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path><path d="M11.5 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path><path d="M17 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg>
                                 </x-dashui-button>
                                 <x-dashui-popover id="{{ $id }}" role="dialog">
                                     {{ $actions }}

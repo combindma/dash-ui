@@ -19,14 +19,19 @@ Experience DashUI in action by visiting the [Demo Project](https://github.com/co
 
 ## Installation
 
-You can install the package and its dependencies via composer:
+You can install the package via composer:
 
 ```bash
 composer require combindma/dash-ui
+```
+
+Optionally, if you intend to use [Blade Google Material Design Icons](https://github.com/codeat3/blade-google-material-design-icons) as it is the case in the demo.
+
+```bash
 composer require codeat3/blade-google-material-design-icons
 ```
 
-This package use [Blade Google Material Design Icons](https://github.com/codeat3/blade-google-material-design-icons), so we recommend you to enable icon caching with this library using this command:
+We recommend you to enable icon caching using this command:
 ```bash
 php artisan icons:cache
 ```
@@ -149,11 +154,7 @@ Make sure your compiled CSS and Javascript are included in your main layout.
 ```
 
 ## Usage
-See the full [documentation](https://combind.notion.site/Dash-UI-288a0eaa11854c69acae5da7842ee788?pvs=4) for all components and how to use them. 
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+See the full [documentation](https://combind.notion.site/Dash-UI-288a0eaa11854c69acae5da7842ee788?pvs=4) for all components and how to use them.
 
 ## Security Vulnerabilities
 

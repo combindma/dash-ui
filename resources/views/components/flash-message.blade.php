@@ -7,7 +7,12 @@
     <div class="flex items-center gap-x-2">
         <p class="leading-none font-medium">{{ $message }}</p>
         <x-dashui-button type="button" variant="subtle" class="p-1 text-inherit" onclick="this.closest('.flash-message--is-visible').classList.remove('flash-message--is-visible')">
-            <x-gmdi-close class="w-6 h-6"/>
+            <svg class="block h-3 w-3 text-inherit fill-current leading-none shrink-0" viewBox="0 0 16 16">
+                <g fill="currentColor">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l10 10"></path>
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 3L3 13"></path>
+                </g>
+            </svg>
         </x-dashui-button>
     </div>
 </div>
