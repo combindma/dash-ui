@@ -44,17 +44,17 @@ php artisan vendor:publish --tag="dash-ui-views"
 
 ## Setup
 
-#### 1. Install Tailwind CSS
+#### 1. Installing Tailwind CSS
 Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both tailwind.config.js and postcss.config.js.
 ```bash
 npm install -D tailwindcss postcss postcss-import autoprefixer @tailwindcss/aspect-ratio @tailwindcss/forms @tailwindcss/typography system-font-css
 npx tailwindcss init -p
 ```
 
-#### 2. Configure your template paths
+#### 2. Configuring styles
 Add the paths to all of your template files in your tailwind.config.js file.
 
-TIP: You can specify your primary color by editing primary: colors.stone,
+TIP: You can specify your primary color by editing primary: colors.stone.
 ```javascript
 const colors = require('tailwindcss/colors')
 
@@ -92,15 +92,26 @@ export default {
 }
 ```
 
+Create a postcss.config.js file in the root of your project and register Tailwind CSS, PostCSS Nesting and Autoprefixer as plugins:
+```javascript
+export default {
+    plugins: {
+        'postcss-import': {},
+        'tailwindcss/nesting': {},
+        tailwindcss: {},
+        autoprefixer: {},
+    }
+}
+```
+
 #### 3. Add the Tailwind directives and import the library to your CSS file
 Import the css files and add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
 ```css
 @import '../../node_modules/system-font-css/system-font.css';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 @import '../../vendor/combindma/dash-ui/resources/css/dashui.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/utilities";
 ```
 
 #### 4. Import javascript components to your js file
