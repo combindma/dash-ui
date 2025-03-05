@@ -8,8 +8,7 @@ class ButtonGroup extends Component
 {
     public function __construct(
         public string $variant = 'basic',
-    ) {
-    }
+    ) {}
 
     public function render()
     {

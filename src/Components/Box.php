@@ -10,8 +10,7 @@ class Box extends Component
         public bool $border = false,
         public bool $shadow = false,
         public bool $rounded = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

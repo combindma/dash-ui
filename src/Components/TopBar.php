@@ -13,8 +13,7 @@ class TopBar extends Component
         public string $userName,
         public string $userInitials,
         public ?string $avatar = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

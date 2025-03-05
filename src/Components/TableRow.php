@@ -9,8 +9,7 @@ class TableRow extends Component
     public function __construct(
         public ?string $id = null,
         public ?string $url = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

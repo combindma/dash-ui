@@ -10,8 +10,7 @@ class Dropzone extends Component
         public string $label,
         public string $id,
         public ?string $helpText = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

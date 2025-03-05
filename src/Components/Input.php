@@ -11,8 +11,7 @@ class Input extends Component
         public ?string $error = null,
         public ?string $prefix = null,
         public ?string $suffix = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

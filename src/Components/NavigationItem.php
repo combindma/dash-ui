@@ -14,8 +14,7 @@ class NavigationItem extends Component
         public bool $open = false,
         public bool $childSelected = false,
         public bool $external = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

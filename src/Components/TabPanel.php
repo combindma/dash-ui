@@ -8,8 +8,7 @@ class TabPanel extends Component
 {
     public function __construct(
         public string $panelId
-    ) {
-    }
+    ) {}
 
     public function render()
     {

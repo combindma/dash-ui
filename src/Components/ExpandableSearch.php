@@ -8,8 +8,7 @@ class ExpandableSearch extends Component
 {
     public function __construct(
         public bool $preventSubmit = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

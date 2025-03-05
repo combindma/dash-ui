@@ -10,8 +10,7 @@ class FlashMessage extends Component
         public string $message,
         public bool $error = false,
         public bool $show = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

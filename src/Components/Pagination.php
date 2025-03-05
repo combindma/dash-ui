@@ -10,8 +10,7 @@ class Pagination extends Component
         public ?string $previous = null,
         public ?string $next = null,
         public ?string $label = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

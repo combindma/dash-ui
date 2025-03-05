@@ -14,8 +14,7 @@ class Button extends Component
         public bool $disabled = false,
         public bool $fullWidth = false,
         public bool $pressed = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

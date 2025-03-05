@@ -10,8 +10,7 @@ class Modal extends Component
         public string $activator,
         public ?string $title = null,
         public string $size = 'normal'
-    ) {
-    }
+    ) {}
 
     public function render()
     {

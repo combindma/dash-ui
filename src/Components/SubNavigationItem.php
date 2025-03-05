@@ -11,8 +11,7 @@ class SubNavigationItem extends Component
         public string $url,
         public bool $selected = false,
         public bool $external = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

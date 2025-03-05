@@ -10,8 +10,7 @@ class PageHeader extends Component
         public string $title,
         public ?string $backAction = null,
         public ?string $subtitle = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

@@ -10,8 +10,7 @@ class Card extends Component
         public string $variant = 'basic',
         public bool $reset = false,
         public bool $hasDivider = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

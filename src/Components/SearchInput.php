@@ -10,8 +10,7 @@ class SearchInput extends Component
         public bool $iconLeft = false,
         public bool $preventSubmit = false,
         public ?string $error = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

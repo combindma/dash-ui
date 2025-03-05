@@ -10,8 +10,7 @@ class Thumbnail extends Component
         public string $size = 'md',
         public ?string $src = null,
         public ?string $alt = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

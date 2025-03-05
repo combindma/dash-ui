@@ -10,9 +10,7 @@ class SelectAuto extends Component
         public ?string $helpText = null,
         public string $placeholderText = '',
         public bool $required = false
-    ) {
-
-    }
+    ) {}
 
     public function render()
     {

@@ -11,8 +11,7 @@ class Avatar extends Component
         public ?string $name = null,
         public ?string $src = null,
         public ?string $initials = null,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

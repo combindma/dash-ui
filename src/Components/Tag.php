@@ -9,8 +9,7 @@ class Tag extends Component
     public function __construct(
         public string $name,
         public string $url,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

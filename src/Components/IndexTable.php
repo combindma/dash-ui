@@ -9,8 +9,7 @@ class IndexTable extends Component
     public function __construct(
         public array $headings,
         public bool $selectable = true,
-    ) {
-    }
+    ) {}
 
     public function render()
     {

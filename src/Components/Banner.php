@@ -9,8 +9,7 @@ class Banner extends Component
     public function __construct(
         public ?string $title = null,
         public string $tone = 'info',
-    ) {
-    }
+    ) {}
 
     public function render()
     {

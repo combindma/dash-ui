@@ -12,8 +12,7 @@ class Combobox extends Component
         public string $selectedText = 'selected',
         public string $resetText = 'reset',
         public string $resultsText = 'No results',
-    ) {
-    }
+    ) {}
 
     public function render()
     {

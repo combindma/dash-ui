@@ -12,8 +12,7 @@ class ActionLink extends Component
         public ?string $helpText = null,
         public bool $active = false,
         public bool $destructive = false,
-    ) {
-    }
+    ) {}
 
     public function render()
     {
