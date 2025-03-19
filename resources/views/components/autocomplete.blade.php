@@ -2,7 +2,7 @@
     <div class="relative">
         <x-dashui-input {{ $attributes->class(['js-autocomplete__input']) }} />
 
-        <div class="autocomplete__loader absolute top-0 right-0 pr-3 lg:pr-5 h-full flex items-center" aria-hidden="true">
+        <div class="autocomplete__loader absolute top-0 right-0 pr-3 lg:pr-5 h-full" aria-hidden="true">
             <div class="circle-loader circle-loader--v1">
                 <div class="circle-loader__circle"></div>
             </div>
@@ -38,6 +38,6 @@
         });
     }
     document.addEventListener('DOMContentLoaded', initializeAutocomplete);
-    document.addEventListener('livewire:init', initializeAutocomplete);
-    document.addEventListener('livewire:reload', initializeAutocomplete);
+    /*document.addEventListener('livewire:init', initializeAutocomplete);
+    document.addEventListener('livewire:reload', initializeAutocomplete);*/
 </script>

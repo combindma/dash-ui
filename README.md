@@ -45,73 +45,66 @@ php artisan vendor:publish --tag="dash-ui-views"
 ## Setup
 
 #### 1. Installing Tailwind CSS
-Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both tailwind.config.js and postcss.config.js.
+Install tailwindcss and its peer dependencies via npm.
 ```bash
-npm install -D tailwindcss postcss postcss-import autoprefixer @tailwindcss/aspect-ratio @tailwindcss/forms @tailwindcss/typography system-font-css
-npx tailwindcss init -p
+npm install -D tailwindcss postcss @tailwindcss/postcss @tailwindcss/aspect-ratio @tailwindcss/forms @tailwindcss/typography
 ```
 
-#### 2. Configuring styles
-Add the paths to all of your template files in your tailwind.config.js file.
-
-TIP: You can specify your primary color by editing primary: colors.stone.
+#### 2. Add Tailwind to your PostCSS configuration
+Add @tailwindcss/postcss to your postcss.config.mjs file, or wherever PostCSS is configured in your project.
 ```javascript
-const colors = require('tailwindcss/colors')
-
 export default {
-    content: [
-        //...
-        './vendor/combindma/dash-ui/resources/views/**/*.blade.php',
-    ],
-    darkMode: 'class',
-    theme: {
-        fontFamily: {
-            sans: ['Inter', 'system-ui'],
-        },
-        fontSize: {
-            xs: '0.75rem',
-            sm: '0.8125rem',
-            base: '0.875rem',
-            lg: '1.25rem',
-            xl: '1.5rem',
-            '2xl': '1.875rem',
-            '3xl': '2.25rem',
-            '4xl': '3.052rem',
-        },
-        extend: {
-            colors: {
-                primary: colors.stone,
-            }
-        }
-    },
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require("@tailwindcss/typography")
-    ],
+  plugins: {
+    "@tailwindcss/postcss": {},
+  }
 }
 ```
 
-Create a postcss.config.js file in the root of your project and register Tailwind CSS, PostCSS Nesting and Autoprefixer as plugins:
-```javascript
-export default {
-    plugins: {
-        'postcss-import': {},
-        'tailwindcss/nesting': {},
-        tailwindcss: {},
-        autoprefixer: {},
-    }
-}
-```
+#### 3. Import Dashui CSS
+Import the css files and add the @tailwind and source directives to your ./resources/css/tailwind.css file.
 
-#### 3. Add the Tailwind directives and import the library to your CSS file
-Import the css files and add the @tailwind directives for each of Tailwind’s layers to your ./resources/css/tailwind.css file.
+TIP: You can specify your primary color by editing primary colors.
 ```css
-@import '../../node_modules/system-font-css/system-font.css';
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import '../../vendor/combindma/dash-ui/resources/css/dashui.css';
-@import "tailwindcss/utilities";
+@import 'tailwindcss';
+@import '../../vendor/combindma/dash-ui/resources/css/dashui.css' layer(utilities);
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/aspect-ratio';
+@plugin '@tailwindcss/typography';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/combindma/dash-ui/resources/views!**!*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --text-*: initial;
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 1.875rem;
+    --text-3xl: 2.25rem;
+    --text-4xl: 3.052rem;
+
+    --color-primary-50: #fafaf9;
+    --color-primary-100: #f5f5f4;
+    --color-primary-200: #e7e5e4;
+    --color-primary-300: #d6d3d1;
+    --color-primary-400: #a8a29e;
+    --color-primary-500: #78716c;
+    --color-primary-600: #57534e;
+    --color-primary-700: #44403c;
+    --color-primary-800: #292524;
+    --color-primary-900: #1c1917;
+    --color-primary-950: #0c0a09;
+}
 ```
 
 #### 4. Import javascript components to your js file
@@ -157,8 +150,6 @@ Make sure your compiled CSS and Javascript are included in your main layout.
 </head>
 <body class="antialiased">
 
-
-<script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
 @vite(['resources/js/app.js'])
 </body>
 </html>

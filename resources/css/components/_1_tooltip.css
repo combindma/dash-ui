@@ -13,10 +13,10 @@ Usage: codyhouse.co/license
 .tooltip {
     /* tooltip element - created using js */
     position: absolute;
-    @apply z-[5];
+    @apply z-5;
     display: inline-block;
     @apply py-1.5 lg:py-2 px-2 lg:px-3;
-    @apply rounded;
+    @apply rounded-sm;
     max-width: 200px;
     @apply bg-white;
     @apply shadow-md;

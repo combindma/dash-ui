@@ -37,7 +37,7 @@
                 <div class="flex items-center">
                     @if(!$title)
                         <div @class([
-    'inline-flex items-center justify-center mr-2 w-6 h-5 lg:w-8 lg:h-8 rounded-sm lg:rounded-lg',
+    'inline-flex items-center justify-center mr-2 w-6 h-5 lg:w-8 lg:h-8 rounded-xs lg:rounded-lg',
     'bg-sky-500/60' => ($tone == 'info'),
     'bg-emerald-600 text-white' => ($tone == 'success'),
     'bg-yellow-500' => ($tone == 'warning'),

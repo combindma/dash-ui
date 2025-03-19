@@ -19,6 +19,8 @@ Usage: codyhouse.co/license
     /* CSS variables inherited from the circle-loader component */
     --circle-loader-v1-size: 1em;
     --circle-loader-v1-stroke-width: 2px;
+    display: flex;
+    align-items: center;
 }
 
 .autocomplete:not(.autocomplete--searching) .autocomplete__loader {
@@ -29,7 +31,7 @@ Usage: codyhouse.co/license
 /* results dropdown  */
 .autocomplete__results {
     position: absolute;
-    @apply z-[5];
+    @apply z-5;
     width: 100%;
     left: 0;
     top: calc(100% + var(--autocomplete-dropdown-vertical-gap));

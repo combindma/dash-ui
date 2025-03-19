@@ -1,3 +1,5 @@
+import { Util } from '../_util.js';
+
 // File#: _1_popover
 // Usage: codyhouse.co/license
 (function() {

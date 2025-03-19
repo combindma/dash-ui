@@ -65,7 +65,7 @@ Usage: codyhouse.co/license
     border-width: var(--checkbox-radio-border-width);
     @apply border-neutral-500;
     border-style: solid;
-    @apply shadow-sm;
+    @apply shadow-xs;
     background-repeat: no-repeat;
     background-position: center;
     margin-right: var(--checkbox-radio-gap);
@@ -94,7 +94,7 @@ Usage: codyhouse.co/license
 .radio:checked + label::before,
 .checkbox:checked + label::before {
     @apply bg-primary-700;
-    @apply shadow-sm;
+    @apply shadow-xs;
     @apply border-primary-700;
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;

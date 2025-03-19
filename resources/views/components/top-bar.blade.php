@@ -1,4 +1,4 @@
-<div {{ $attributes->class(['top-bar fixed top-0 left-0 w-full overflow-hidden px-3 shadow-sm h-full bg-primary-900 z-[4] lg:px-4']) }}>
+<div {{ $attributes->class(['top-bar fixed top-0 left-0 w-full overflow-hidden px-3 shadow-xs h-full bg-primary-900 z-4 lg:px-4']) }}>
     <div class="relative h-full gap-2 top-bar__inner">
         <div class="block lg:hidden">
             <button type="button" aria-controls="{{ $menuId }}" class="flex items-center rounded-md text-white p-1.5 hover:cursor-pointer hover:bg-neutral-600">

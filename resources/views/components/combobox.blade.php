@@ -12,7 +12,7 @@
                 </button>
             </div>
 
-            <div class="relative w-full rounded-lg bg-white border border-gray-300 overflow-hidden mt-0.5 z-[3] list-filter__list-wrapper js-multi-select-v2__wrapper" style="display: none;">
+            <div class="relative w-full rounded-lg bg-white border border-gray-300 overflow-hidden mt-0.5 z-3 list-filter__list-wrapper js-multi-select-v2__wrapper" style="display: none;">
                 <ul class="p-2 list-filter__list js-list-filter__list">
                     @foreach($options as $option)
                         <li class="js-list-filter__item">

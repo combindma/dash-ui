@@ -1,3 +1,5 @@
+import { Util } from '../_util.js';
+
 // File#: _3_select-autocomplete
 // Usage: codyhouse.co/license
 (function() {

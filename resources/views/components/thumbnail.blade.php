@@ -1,6 +1,6 @@
 <span {{ $attributes->class([
     'inline-flex bg-white overflow-hidden relative',
-    'w-6 h-6 rounded-sm' => ($size == 'xs'),
+    'w-6 h-6 rounded-xs' => ($size == 'xs'),
     'w-10 h-10 rounded-md' => ($size == 'sm'),
     'w-14 h-14 rounded-lg' => ($size == 'md'),
     'w-20 h-20 rounded-lg' => ($size == 'lg'),

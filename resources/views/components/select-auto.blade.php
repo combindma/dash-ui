@@ -14,7 +14,7 @@
 
         <div class="select-auto__input-icon-wrapper">
             <!-- arrow icon -->
-            <svg class="icon inline-block text-inherit fill-current leading-none shrink-0" viewBox="0 0 16 16">
+            <svg class="icon text-inherit fill-current leading-none shrink-0" viewBox="0 0 16 16">
                 <polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
             </svg>
 

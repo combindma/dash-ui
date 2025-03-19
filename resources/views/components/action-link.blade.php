@@ -1,6 +1,6 @@
-@if($as == 'link')
+@if($as === 'link')
     <a {{ $attributes->class([
-    'text-left block px-2 py-1.5 rounded lg:rounded-md hover:cursor-pointer',
+    'text-left block px-2 py-1.5 rounded-sm lg:rounded-md hover:cursor-pointer',
     'hover:bg-neutral-100 active:bg-neutral-200/70' => !$active && !$destructive,
     'bg-neutral-200/70' => $active,
     'text-red-800 hover:bg-red-100/80 active:bg-red-200/60' => $destructive,
@@ -20,7 +20,7 @@
     </a>
 @else
     <button {{ $attributes->class([
-    'text-left block px-2 py-1.5 rounded lg:rounded-md hover:cursor-pointer',
+    'text-left block px-2 py-1.5 rounded-sm lg:rounded-md hover:cursor-pointer',
     'hover:bg-neutral-100 active:bg-neutral-200/70' => !$active && !$destructive,
     'bg-neutral-200/70' => $active,
     'text-red-800 hover:bg-red-100/80 active:bg-red-200/60' => $destructive,

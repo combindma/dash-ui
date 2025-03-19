@@ -1,10 +1,10 @@
-<div id="{{ $activator }}" @class(['bg-neutral-900/75 modal modal--animate-translate-up js-modal' ,'flex items-end justify-center lg:items-center lg:p-8' => ($size !== 'fullScreen')]) data-modal-prevent-scroll="body">
+<div id="{{ $activator }}" @class(['bg-neutral-900/75 modal modal--animate-fade js-modal' ,'flex items-end justify-center lg:items-center lg:p-8' => ($size !== 'fullScreen')]) data-modal-prevent-scroll="body">
     <div {{ $attributes->class([
     'modal__content w-full max-h-full overflow-auto bg-white lg:rounded-[16px] shadow-lg' => ($size !== 'fullScreen'),
-    'lg:max-w-md' => ($size == 'small'),
-    'lg:max-w-2xl' => ($size == 'normal'),
-    'max-w-7xl' => ($size == 'large'),
-    'modal__content bg-white h-full flex flex-col' => ($size == 'fullScreen'),
+    'lg:max-w-md' => ($size === 'small'),
+    'lg:max-w-2xl' => ($size === 'normal'),
+    'max-w-7xl' => ($size === 'large'),
+    'modal__content bg-white h-full flex flex-col' => ($size === 'fullScreen'),
     ]) }}>
         @if($title)
             <header class="bg-neutral-300/50 py-2 lg:py-3 px-2 lg:px-3 flex items-center justify-between">
