@@ -72,7 +72,7 @@ TIP: You can specify your primary color by editing primary colors.
 @plugin '@tailwindcss/typography';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../vendor/combindma/dash-ui/resources/views!**!*.blade.php';
+@source '../../vendor/combindma/dash-ui/resources/views/**/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 
