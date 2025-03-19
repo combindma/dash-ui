@@ -1,7 +1,6 @@
 # UI components library for Laravel Blade, crafted with TailwindCSS and Javascript for simplicity and elegance.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/combindma/dash-ui.svg?style=flat-square)](https://packagist.org/packages/combindma/dash-ui)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/combindma/dash-ui/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/combindma/dash-ui/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/combindma/dash-ui/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/combindma/dash-ui/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/combindma/dash-ui.svg?style=flat-square)](https://packagist.org/packages/combindma/dash-ui)
 
