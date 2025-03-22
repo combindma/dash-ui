@@ -65,7 +65,7 @@ Import the css files and add the @tailwind and source directives to your ./resou
 TIP: You can specify your primary color by editing primary colors.
 ```css
 @import 'tailwindcss';
-@import '../../vendor/combindma/dash-ui/resources/css/dashui.css' layer(utilities);
+@import '../../vendor/combindma/dash-ui/resources/css/dashui.css';
 
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/aspect-ratio';
