@@ -7,7 +7,6 @@ use Illuminate\View\Component;
 class Autocomplete extends Component
 {
     public function __construct(
-        public array $options,
     ) {}
 
     public function render()

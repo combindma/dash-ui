@@ -6,8 +6,6 @@
         </svg>
     </button>
     <el-options anchor="bottom end" popover class="max-h-60 w-(--input-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline outline-black/5 transition-discrete [--anchor-gap:--spacing(1)] data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
-        @foreach($options as $option)
-            <el-option value="{{ $option['value'] }}" class="block truncate px-3 py-2 text-gray-900 select-none aria-selected:bg-primary-800 aria-selected:text-white">{{ $option['label'] }}</el-option>
-        @endforeach
+        {{ $slot }}
     </el-options>
 </el-autocomplete>
