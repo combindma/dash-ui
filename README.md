@@ -61,6 +61,36 @@ Import the css files and add the @tailwind and source directives to your ./resou
 
 @source '../../vendor/combindma/dash-ui/resources/views/**/*.blade.php';
 @source '../../vendor/combindma/dash-ui/resources/js/dashui.js';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --text-*: initial;
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 1.875rem;
+    --text-3xl: 2.25rem;
+    --text-4xl: 3.052rem;
+
+    --color-primary-50: #fafaf9;
+    --color-primary-100: #f5f5f4;
+    --color-primary-200: #e7e5e4;
+    --color-primary-300: #d6d3d1;
+    --color-primary-400: #a8a29e;
+    --color-primary-500: #78716c;
+    --color-primary-600: #57534e;
+    --color-primary-700: #44403c;
+    --color-primary-800: #292524;
+    --color-primary-900: #1c1917;
+    --color-primary-950: #0c0a09;
+
+    --top-bar-height: 3.75rem;
+}
 ```
 
 #### 4. Import JavaScript components to your js file
