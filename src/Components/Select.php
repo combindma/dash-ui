@@ -13,6 +13,6 @@ class Select extends Component
 
     public function render()
     {
-        return view('dash-ui::components.select');
+        return view('dashui::components.select');
     }
 }

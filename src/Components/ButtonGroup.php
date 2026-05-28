@@ -12,6 +12,6 @@ class ButtonGroup extends Component
 
     public function render()
     {
-        return view('dash-ui::components.button-group');
+        return view('dashui::components.button-group');
     }
 }

@@ -12,6 +12,6 @@ class Tabs extends Component
 
     public function render()
     {
-        return view('dash-ui::components.tabs');
+        return view('dashui::components.tabs');
     }
 }

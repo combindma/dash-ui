@@ -8,6 +8,6 @@ class Divider extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.divider');
+        return view('dashui::components.divider');
     }
 }

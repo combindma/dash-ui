@@ -20,7 +20,6 @@ use Combindma\DashUi\Components\CopyToClip;
 use Combindma\DashUi\Components\Divider;
 use Combindma\DashUi\Components\Dropzone;
 use Combindma\DashUi\Components\EmptyState;
-use Combindma\DashUi\Components\ExpandableSearch;
 use Combindma\DashUi\Components\FlashMessage;
 use Combindma\DashUi\Components\IndexTable;
 use Combindma\DashUi\Components\InlineError;
@@ -81,7 +80,6 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Select::class,
                 Combobox::class,
                 SearchInput::class,
-                ExpandableSearch::class,
                 CircleLoader::class,
                 Dropzone::class,
                 Tag::class,
@@ -101,6 +99,6 @@ class DashUiServiceProvider extends PackageServiceProvider
                 Autocomplete::class,
                 SelectAuto::class,
             )
-            ->hasViews();
+            ->hasViews('dashui');
     }
 }

@@ -13,6 +13,6 @@ class NavigationSection extends Component
 
     public function render()
     {
-        return view('dash-ui::components.navigation-section');
+        return view('dashui::components.navigation-section');
     }
 }

@@ -12,6 +12,6 @@ class InlineError extends Component
 
     public function render()
     {
-        return view('dash-ui::components.inline-error');
+        return view('dashui::components.inline-error');
     }
 }

@@ -7,11 +7,11 @@ use Illuminate\View\Component;
 class TabPanel extends Component
 {
     public function __construct(
-        public string $panelId
+        public bool $selected = false
     ) {}
 
     public function render()
     {
-        return view('dash-ui::components.tab-panel');
+        return view('dashui::components.tab-panel');
     }
 }

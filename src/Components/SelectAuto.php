@@ -14,6 +14,6 @@ class SelectAuto extends Component
 
     public function render()
     {
-        return view('dash-ui::components.select-auto');
+        return view('dashui::components.select-auto');
     }
 }

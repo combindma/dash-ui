@@ -8,6 +8,6 @@ class Tooltip extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.tooltip');
+        return view('dashui::components.tooltip');
     }
 }

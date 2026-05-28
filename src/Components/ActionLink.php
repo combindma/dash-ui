@@ -16,6 +16,6 @@ class ActionLink extends Component
 
     public function render()
     {
-        return view('dash-ui::components.action-link');
+        return view('dashui::components.action-link');
     }
 }

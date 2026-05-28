@@ -14,6 +14,6 @@ class Dropzone extends Component
 
     public function render()
     {
-        return view('dash-ui::components.dropzone');
+        return view('dashui::components.dropzone');
     }
 }

@@ -13,6 +13,6 @@ class MediaCard extends Component
 
     public function render()
     {
-        return view('dash-ui::components.media-card');
+        return view('dashui::components.media-card');
     }
 }

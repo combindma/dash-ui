@@ -18,6 +18,6 @@ class Button extends Component
 
     public function render()
     {
-        return view('dash-ui::components.button');
+        return view('dashui::components.button');
     }
 }

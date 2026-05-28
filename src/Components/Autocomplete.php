@@ -13,6 +13,6 @@ class Autocomplete extends Component
 
     public function render()
     {
-        return view('dash-ui::components.autocomplete');
+        return view('dashui::components.autocomplete');
     }
 }

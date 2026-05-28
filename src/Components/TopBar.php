@@ -17,6 +17,6 @@ class TopBar extends Component
 
     public function render()
     {
-        return view('dash-ui::components.top-bar');
+        return view('dashui::components.top-bar');
     }
 }

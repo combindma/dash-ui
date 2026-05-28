@@ -13,6 +13,6 @@ class TableRow extends Component
 
     public function render()
     {
-        return view('dash-ui::components.table-row');
+        return view('dashui::components.table-row');
     }
 }

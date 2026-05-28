@@ -13,6 +13,6 @@ class IndexTable extends Component
 
     public function render()
     {
-        return view('dash-ui::components.index-table');
+        return view('dashui::components.index-table');
     }
 }

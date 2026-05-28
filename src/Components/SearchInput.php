@@ -14,6 +14,6 @@ class SearchInput extends Component
 
     public function render()
     {
-        return view('dash-ui::components.search-input');
+        return view('dashui::components.search-input');
     }
 }

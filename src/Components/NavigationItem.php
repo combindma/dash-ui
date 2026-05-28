@@ -18,6 +18,6 @@ class NavigationItem extends Component
 
     public function render()
     {
-        return view('dash-ui::components.navigation-item');
+        return view('dashui::components.navigation-item');
     }
 }

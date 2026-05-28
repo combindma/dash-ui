@@ -7,13 +7,13 @@ use Illuminate\View\Component;
 class Modal extends Component
 {
     public function __construct(
-        public string $activator,
+        public string $trigger,
         public ?string $title = null,
         public string $size = 'normal'
     ) {}
 
     public function render()
     {
-        return view('dash-ui::components.modal');
+        return view('dashui::components.modal');
     }
 }

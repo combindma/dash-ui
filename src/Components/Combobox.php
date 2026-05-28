@@ -16,6 +16,6 @@ class Combobox extends Component
 
     public function render()
     {
-        return view('dash-ui::components.combobox');
+        return view('dashui::components.combobox');
     }
 }

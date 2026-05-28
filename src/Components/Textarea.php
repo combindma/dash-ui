@@ -13,6 +13,6 @@ class Textarea extends Component
 
     public function render()
     {
-        return view('dash-ui::components.textarea');
+        return view('dashui::components.textarea');
     }
 }

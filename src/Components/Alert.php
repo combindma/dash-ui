@@ -13,6 +13,6 @@ class Alert extends Component
 
     public function render()
     {
-        return view('dash-ui::components.alert');
+        return view('dashui::components.alert');
     }
 }

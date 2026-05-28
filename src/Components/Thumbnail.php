@@ -14,6 +14,6 @@ class Thumbnail extends Component
 
     public function render()
     {
-        return view('dash-ui::components.thumbnail');
+        return view('dashui::components.thumbnail');
     }
 }

@@ -14,6 +14,6 @@ class Pagination extends Component
 
     public function render()
     {
-        return view('dash-ui::components.pagination');
+        return view('dashui::components.pagination');
     }
 }

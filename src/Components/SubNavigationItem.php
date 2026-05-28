@@ -15,6 +15,6 @@ class SubNavigationItem extends Component
 
     public function render()
     {
-        return view('dash-ui::components.sub-navigation-item');
+        return view('dashui::components.sub-navigation-item');
     }
 }

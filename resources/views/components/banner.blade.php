@@ -1,4 +1,4 @@
-<div class="absolute mb-3 alert alert--is-visible js-alert [&.alert--is-visible]:static">
+<div class="mb-3 js-alert">
     <div class="rounded-lg before:rounded-lg card">
         <div class="bg-white">
             @if($title)

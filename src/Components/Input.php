@@ -15,6 +15,6 @@ class Input extends Component
 
     public function render()
     {
-        return view('dash-ui::components.input');
+        return view('dashui::components.input');
     }
 }

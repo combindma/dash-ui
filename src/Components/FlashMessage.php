@@ -14,6 +14,6 @@ class FlashMessage extends Component
 
     public function render()
     {
-        return view('dash-ui::components.flash-message');
+        return view('dashui::components.flash-message');
     }
 }

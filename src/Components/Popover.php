@@ -8,6 +8,6 @@ class Popover extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.popover');
+        return view('dashui::components.popover');
     }
 }

@@ -14,6 +14,6 @@ class Card extends Component
 
     public function render()
     {
-        return view('dash-ui::components.card');
+        return view('dashui::components.card');
     }
 }

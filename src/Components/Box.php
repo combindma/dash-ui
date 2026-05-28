@@ -14,6 +14,6 @@ class Box extends Component
 
     public function render()
     {
-        return view('dash-ui::components.box');
+        return view('dashui::components.box');
     }
 }

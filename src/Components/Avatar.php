@@ -15,6 +15,6 @@ class Avatar extends Component
 
     public function render()
     {
-        return view('dash-ui::components.avatar');
+        return view('dashui::components.avatar');
     }
 }

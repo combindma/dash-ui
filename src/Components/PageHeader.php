@@ -14,6 +14,6 @@ class PageHeader extends Component
 
     public function render()
     {
-        return view('dash-ui::components.page-header');
+        return view('dashui::components.page-header');
     }
 }

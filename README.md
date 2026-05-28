@@ -46,67 +46,24 @@ php artisan vendor:publish --tag="dash-ui-views"
 #### 1. Installing Tailwind CSS
 Install tailwindcss and its peer dependencies via npm.
 ```bash
-npm install -D tailwindcss postcss @tailwindcss/postcss @tailwindcss/aspect-ratio @tailwindcss/forms @tailwindcss/typography
+npm install -D tailwindcss @tailwindcss/forms @tailwindcss/typography @tailwindplus/elements
 ```
 
-#### 2. Add Tailwind to your PostCSS configuration
-Add @tailwindcss/postcss to your postcss.config.mjs file, or wherever PostCSS is configured in your project.
-```javascript
-export default {
-  plugins: {
-    "@tailwindcss/postcss": {},
-  }
-}
-```
+#### 2. Import Dashui CSS
+Import the css files and add the @tailwind and source directives to your ./resources/css/app.css file.
 
-#### 3. Import Dashui CSS
-Import the css files and add the @tailwind and source directives to your ./resources/css/tailwind.css file.
-
-TIP: You can specify your primary color by editing primary colors.
 ```css
 @import 'tailwindcss';
 @import '../../vendor/combindma/dash-ui/resources/css/dashui.css';
 
 @plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/aspect-ratio';
 @plugin '@tailwindcss/typography';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../vendor/combindma/dash-ui/resources/views/**/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-
-
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
-    --text-*: initial;
-    --text-xs: 0.75rem;
-    --text-sm: 0.8125rem;
-    --text-base: 0.875rem;
-    --text-lg: 1.25rem;
-    --text-xl: 1.5rem;
-    --text-2xl: 1.875rem;
-    --text-3xl: 2.25rem;
-    --text-4xl: 3.052rem;
-
-    --color-primary-50: #fafaf9;
-    --color-primary-100: #f5f5f4;
-    --color-primary-200: #e7e5e4;
-    --color-primary-300: #d6d3d1;
-    --color-primary-400: #a8a29e;
-    --color-primary-500: #78716c;
-    --color-primary-600: #57534e;
-    --color-primary-700: #44403c;
-    --color-primary-800: #292524;
-    --color-primary-900: #1c1917;
-    --color-primary-950: #0c0a09;
-}
+@source '../../vendor/combindma/dash-ui/resources/js/dashui.js';
 ```
 
-#### 4. Import javascript components to your js file
+#### 4. Import JavaScript components to your js file
 Import the js file to your ./resources/js/app.js file.
 ```javascript
 import '../../vendor/combindma/dash-ui/resources/js/dashui.js';
@@ -121,9 +78,10 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/tailwind.css', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
+        tailwindcss(),
     ],
 });
 ```
@@ -143,9 +101,9 @@ Make sure your compiled CSS and Javascript are included in your main layout.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    @vite(['resources/css/tailwind.css'])
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+    @vite(['resources/css/app.css'])
 </head>
 <body class="antialiased">
 

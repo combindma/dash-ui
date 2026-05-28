@@ -8,6 +8,6 @@ class EmptyState extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.empty-state');
+        return view('dashui::components.empty-state');
     }
 }

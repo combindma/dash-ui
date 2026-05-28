@@ -8,6 +8,6 @@ class TableCell extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.table-cell');
+        return view('dashui::components.table-cell');
     }
 }

@@ -1,4 +1,4 @@
-<div class="alert mb-3 alert--is-visible absolute [&.alert--is-visible]:static js-alert">
+<div class="mb-3 js-alert">
     <div {{ $attributes->class([
     'flex justify-between items-baseline p-2 rounded-lg',
     'bg-sky-100 text-sky-900' => ($tone == 'info'),

@@ -8,6 +8,6 @@ class CalloutCard extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.callout-card');
+        return view('dashui::components.callout-card');
     }
 }

@@ -8,6 +8,6 @@ class CircleLoader extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.circle-loader');
+        return view('dashui::components.circle-loader');
     }
 }

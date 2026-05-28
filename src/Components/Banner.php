@@ -13,6 +13,6 @@ class Banner extends Component
 
     public function render()
     {
-        return view('dash-ui::components.banner');
+        return view('dashui::components.banner');
     }
 }

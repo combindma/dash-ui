@@ -8,6 +8,6 @@ class Navigation extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.navigation');
+        return view('dashui::components.navigation');
     }
 }

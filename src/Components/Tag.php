@@ -13,6 +13,6 @@ class Tag extends Component
 
     public function render()
     {
-        return view('dash-ui::components.tag');
+        return view('dashui::components.tag');
     }
 }

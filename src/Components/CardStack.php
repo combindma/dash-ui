@@ -8,6 +8,6 @@ class CardStack extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.card-stack');
+        return view('dashui::components.card-stack');
     }
 }

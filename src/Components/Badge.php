@@ -13,6 +13,6 @@ class Badge extends Component
 
     public function render()
     {
-        return view('dash-ui::components.badge');
+        return view('dashui::components.badge');
     }
 }

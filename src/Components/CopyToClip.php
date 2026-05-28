@@ -8,6 +8,6 @@ class CopyToClip extends Component
 {
     public function render()
     {
-        return view('dash-ui::components.copy-to-clip');
+        return view('dashui::components.copy-to-clip');
     }
 }

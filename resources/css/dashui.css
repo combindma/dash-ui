@@ -1,20 +1,34 @@
-@import './components/_1_modal-window.css' layer(utilities);
-@import './components/_1_popover.css' layer(utilities);
-@import './components/_1_radios-checkboxes.css' layer(utilities);
-@import './components/_1_custom-checkbox.css' layer(utilities);
-@import './components/_1_responsive-sidebar.css' layer(utilities);
-@import './components/_1_tooltip.css' layer(utilities);
-@import './components/_1_expandable-search.css' layer(utilities);
-@import './components/_1_list-filter.css' layer(utilities);
-@import './components/_2_autocomplete.css' layer(utilities);
-@import './components/_3_select-autocomplete.css' layer(utilities);
+@custom-variant dark (&:is(.dark *));
 
+@theme {
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --text-*: initial;
+    --text-xs: 0.75rem;
+    --text-sm: 0.8125rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 1.875rem;
+    --text-3xl: 2.25rem;
+    --text-4xl: 3.052rem;
+
+    --color-primary-50: #fafaf9;
+    --color-primary-100: #f5f5f4;
+    --color-primary-200: #e7e5e4;
+    --color-primary-300: #d6d3d1;
+    --color-primary-400: #a8a29e;
+    --color-primary-500: #78716c;
+    --color-primary-600: #57534e;
+    --color-primary-700: #44403c;
+    --color-primary-800: #292524;
+    --color-primary-900: #1c1917;
+    --color-primary-950: #0c0a09;
+
+    --top-bar-height: 3.75rem;
+}
 
 @layer components {
-    :root {
-        --top-bar-height: 3.75rem;
-    }
-
     [x-cloak] {
         display: none !important;
     }
@@ -35,13 +49,12 @@
 
     /* --------------------------------
 
-    Frame
+    Navigation
 
     -------------------------------- */
-    .frame {
-        position: relative;
+    .page {
         padding-top: calc(.15rem + var(--top-bar-height));
-        @apply bg-neutral-200/50 lg:flex;
+        @apply relative bg-neutral-200/50 lg:flex;
     }
 
     .top-bar {
@@ -102,6 +115,14 @@
         margin-bottom: 0.25rem;
         word-break: break-word;
         overflow-wrap: break-word;
+    }
+
+    .checkbox {
+     @apply cursor-pointer rounded-sm checked:bg-primary-800;
+    }
+
+    .radio {
+        @apply cursor-pointer checked:bg-primary-800;
     }
 
     .search-input::-webkit-search-decoration, .search-input::-webkit-search-cancel-button, .search-input::-webkit-search-results-button, .search-input::-webkit-search-results-decoration {
@@ -345,123 +366,6 @@
 
     /* --------------------------------
 
-    Alert
-
-    -------------------------------- */
-    .alert {
-        clip-path: inset(50%);
-    }
-
-    .alert--is-visible {
-        clip-path: none;
-    }
-
-
-    /* --------------------------------
-
-    Circle Loader
-
-    -------------------------------- */
-    :root {
-        --circle-loader-v1-size: 48px;
-        --circle-loader-v1-stroke-width: 4px;
-    }
-
-    .circle-loader {
-        position: relative;
-        display: inline-block;
-    }
-
-    @supports ((-webkit-animation-name: this) or (animation-name: this)) {
-        .circle-loader__label {
-            position: absolute;
-            clip: rect(1px, 1px, 1px, 1px);
-            clip-path: inset(50%);
-        }
-    }
-    @supports ((-webkit-animation-name: this) or (animation-name: this)) {
-        .circle-loader--v1 {
-            transform: rotate(45deg);
-            will-change: transform;
-            animation: circle-loader-1 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
-        }
-
-        .circle-loader--v1 .circle-loader__circle {
-            width: var(--circle-loader-v1-size);
-            height: var(--circle-loader-v1-size);
-            border-width: var(--circle-loader-v1-stroke-width);
-            border-style: solid;
-            @apply border-primary-700/20;
-            border-radius: 50%;
-        }
-
-        .circle-loader--v1 .circle-loader__circle::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-width: inherit;
-            border-style: inherit;
-            border-color: transparent;
-            @apply border-t-primary-700;
-            border-radius: inherit;
-        }
-    }
-    @keyframes circle-loader-1 {
-        0% {
-            transform: rotate(45deg);
-        }
-        100% {
-            transform: rotate(405deg);
-        }
-    }
-
-
-    /* --------------------------------
-
-    Copy To Clipboard
-
-    -------------------------------- */
-    .copy-to-clip {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        @apply rounded-sm;
-        @apply bg-gray-900/10;
-        cursor: pointer;
-        transition: 0.2s;
-    }
-
-    .copy-to-clip:hover {
-        @apply bg-gray-900/[.15];
-    }
-
-    .copy-to-clip:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px hsl(221 39% 11% / 0.35);
-    }
-
-    .copy-to-clip__icon-check {
-        stroke-dashoffset: 8.49;
-        stroke-dasharray: 8.49 8.49;
-        transition: stroke-dashoffset 0.3s;
-    }
-
-    .copy-to-clip--copied {
-        /* added in JS when content has been copied */
-    }
-
-    .copy-to-clip--copied .copy-to-clip__icon-check {
-        stroke-dashoffset: 0;
-    }
-
-
-    /* --------------------------------
-
     Title: Multiple Custom Select
 
     -------------------------------- */
@@ -483,5 +387,40 @@
         --custom-checkbox-marker-size: 14px;
         width: var(--custom-checkbox-size);
         height: var(--custom-checkbox-size);
+    }
+
+
+    /* --------------------------------
+
+    Title: Tooltip
+
+    -------------------------------- */
+    .tooltip--top::before, .tooltip--bottom::before {
+        left: calc(50% - 6px);
+    }
+
+    .tooltip--top::before {
+        bottom: calc(12px * -0.5);
+        -webkit-transform: translateX(0px) rotate(-45deg);transform: translateX(0px) rotate(-45deg);
+    }
+
+
+    .tooltip--bottom::before {
+        top: calc(12px * -0.5);
+        -webkit-transform: translateX(0px) rotate(135deg);transform: translateX(0px) rotate(135deg);
+    }
+
+    .tooltip--left::before, .tooltip--right::before {
+        top: calc(50% - 6px);
+    }
+
+    .tooltip--left::before {
+        right: calc(12px * -0.5);
+        -webkit-transform: translateX(0px) rotate(-135deg);transform: translateX(0px) rotate(-135deg);
+    }
+
+    .tooltip--right::before {
+        left: calc(12px * -0.5);
+        -webkit-transform: translateX(0px) rotate(45deg);transform: translateX(0px) rotate(45deg);
     }
 }
