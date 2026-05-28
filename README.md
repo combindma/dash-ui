@@ -66,6 +66,7 @@ Import the css files and add the @tailwind and source directives to your ./resou
 #### 4. Import JavaScript components to your js file
 Import the js file to your ./resources/js/app.js file.
 ```javascript
+import '@tailwindplus/elements';
 import '../../vendor/combindma/dash-ui/resources/js/dashui.js';
 ```
 
