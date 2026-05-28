@@ -1,43 +1,13 @@
-<div id="{{ $activator }}" class="autocomplete relative js-autocomplete" data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
-    <div class="relative">
-        <x-dashui-input {{ $attributes->class(['js-autocomplete__input']) }} />
-
-        <div class="autocomplete__loader absolute top-0 right-0 pr-3 lg:pr-5 h-full" aria-hidden="true">
-            <div class="circle-loader circle-loader--v1">
-                <div class="circle-loader__circle"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- dropdown -->
-    <div class="autocomplete__results shadow-[0px_4px_6px_-2px_rgba(26,26,26,0.20)] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)_inset] js-autocomplete__results">
-        <ul class="autocomplete__list js-autocomplete__list">
-            <li class="autocomplete__item py-2 lg:py-3 px-3 lg:px-5 truncate js-autocomplete__item hidden"></li>
-        </ul>
-    </div>
-
-    <p class="sr-only" aria-live="polite" aria-atomic="true"><span class="js-autocomplete__aria-results">0</span> results found.</p>
-</div>
-
-<script>
-    function initializeAutocomplete() {
-        var autocomplete = document.getElementById('{{ $activator }}');
-        var searchValues = {{ Js::from($options) }};
-        new Autocomplete({
-            element: autocomplete,
-            searchData: function(query, cb, eventType) {
-                var data = searchValues.filter(function(item){
-                    return item['label'].toLowerCase().indexOf(query.toLowerCase()) > -1;
-                });
-                cb(data);
-            },
-            onClick: function(option, obj, event, cb) {
-                obj.input.value = option.textContent;
-                cb();
-            }
-        });
-    }
-    document.addEventListener('DOMContentLoaded', initializeAutocomplete);
-    /*document.addEventListener('livewire:init', initializeAutocomplete);
-    document.addEventListener('livewire:reload', initializeAutocomplete);*/
-</script>
+<el-autocomplete class="relative block">
+    <x-dashui-input {{ $attributes }} />
+    <button type="button" class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2">
+        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-gray-400">
+            <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+        </svg>
+    </button>
+    <el-options anchor="bottom end" popover class="max-h-60 w-(--input-width) overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline outline-black/5 transition-discrete [--anchor-gap:--spacing(1)] data-leave:transition data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+        @foreach($options as $option)
+            <el-option value="{{ $option['value'] }}" class="block truncate px-3 py-2 text-gray-900 select-none aria-selected:bg-primary-800 aria-selected:text-white">{{ $option['label'] }}</el-option>
+        @endforeach
+    </el-options>
+</el-autocomplete>

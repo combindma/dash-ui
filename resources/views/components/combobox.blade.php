@@ -17,9 +17,8 @@
                     @foreach($options as $option)
                         <li class="js-list-filter__item">
                             <label class="cursor-pointer rounded-md px-2 py-2 flex items-center user-select lg:px-3">
-                            <span class="pointer-events-none custom-checkbox multi-select-v2__checkbox mr-1.5 lg:mr-2">
-                                <input class="custom-checkbox__input js-multi-select-v2__input" type="checkbox" name="{{ $inputName }}" value="{{ $option['value'] }}" @checked($option['selected']??false)/>
-                                <span class="custom-checkbox__control" aria-hidden="true"></span>
+                            <span class="pointer-events-none mr-1.5 lg:mr-2">
+                                <input class="checkbox js-multi-select-v2__input" type="checkbox" name="{{ $inputName }}" value="{{ $option['value'] }}" @checked($option['selected']??false)/>
                             </span>
                                 <span class="leading-none js-list-filter__label">{{ $option['label'] }}</span>
                             </label>

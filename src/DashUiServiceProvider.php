@@ -34,7 +34,6 @@ use Combindma\DashUi\Components\Pagination;
 use Combindma\DashUi\Components\Popover;
 use Combindma\DashUi\Components\SearchInput;
 use Combindma\DashUi\Components\Select;
-use Combindma\DashUi\Components\SelectAuto;
 use Combindma\DashUi\Components\SubNavigationItem;
 use Combindma\DashUi\Components\TableCell;
 use Combindma\DashUi\Components\TableRow;
@@ -97,7 +96,6 @@ class DashUiServiceProvider extends PackageServiceProvider
                 SubNavigationItem::class,
                 CopyToClip::class,
                 Autocomplete::class,
-                SelectAuto::class,
             )
             ->hasViews('dashui');
     }
